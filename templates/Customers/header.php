@@ -5,6 +5,8 @@
  */
 ?>
 <?php $this->Html->css('my',['block'=>true]);?>
+<!DOCTYPE html>
+<html>
 <head>
     <title>Paul's Honey</title>
 </head>
@@ -23,3 +25,5 @@
     </div>
 
 </body>
+
+</html>
