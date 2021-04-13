@@ -1,5 +1,4 @@
 .container{
-    display: inline-block;
     border: 1px solid blue;
     background-color: yellow;
 }
@@ -8,6 +7,16 @@
     top: 50%;
     left: 50%;
 }
+
 .btn-group{
     display:inline-block;
+}
+
+.tbody{
+    background-color: red;
+}
+
+.btn-individual{
+    display:inline-block;
+    margin:10px;
 }
