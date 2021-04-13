@@ -1,7 +1,5 @@
 .container{
     display: inline-block;
-    width: 100px;
-    height: 100px;
     border: 1px solid blue;
     background-color: yellow;
 }
