@@ -1,6 +1,6 @@
 .container1{
     border: 1px solid blue;
-    background-color: yellow;
+    background-color: red;
 }
 .wrapper {
     box-sizing: content-box;

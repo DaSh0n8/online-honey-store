@@ -9,7 +9,6 @@ require ROOT . '/templates/Customers/header.php';
 
 ?>
 <div class="products index content">
-    <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Products') ?></h3>
     <div class="table-responsive">
         <table>

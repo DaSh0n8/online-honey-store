@@ -17,16 +17,16 @@ $this->Html->css('my', ['block' => true]);
 <div class='btn-group'>
         <div class="container1">
             <div class = 'btn-individual'>
-            <?= $this->Html->link(__('Add Products'), ['action' => '../Products/add'], ['class' => 'button float-right']) ?>
+                <?= $this->Html->link(__('List Customers'), ['action' => '../Customers/index'], ['class' => 'button float-right']) ?>
             </div>
             <div class = 'btn-individual'>
-            <?= $this->Html->link(__('List Products'), ['action' => '../Products/index'], ['class' => 'button float-right']) ?>
+                <?= $this->Html->link(__('Add Customer'), ['action' => '../Customers/add'], ['class' => 'button float-right']) ?>
             </div>
             <div class = 'btn-individual'>
-            <?= $this->Html->link(__('Add Customer'), ['action' => '../Customers/add'], ['class' => 'button float-right']) ?>
+                <?= $this->Html->link(__('List Products'), ['action' => '../Products/index'], ['class' => 'button float-right']) ?>
             </div>
             <div class = 'btn-individual'>
-            <?= $this->Html->link(__('List Customers'), ['action' => '../Customers/index'], ['class' => 'button float-right']) ?>
+                <?= $this->Html->link(__('Add Products'), ['action' => '../Products/add'], ['class' => 'button float-right']) ?>
             </div>
         </div>
 </div>
