@@ -1,4 +1,7 @@
 <?php
+define(ROOT,'./');
+
+require ROOT . '\templates\Customers\header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product

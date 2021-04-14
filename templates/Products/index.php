@@ -1,8 +1,12 @@
 <?php
+define(ROOT,'./');
+
+require ROOT . '\templates\Customers\header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
+
 ?>
 <div class="products index content">
     <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'button float-right']) ?>

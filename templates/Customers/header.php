@@ -15,7 +15,7 @@ $this->Html->css('my', ['block' => true]);
 <div id="header">
 <h1>Paul's Honey</h1>
 <div class='btn-group'>
-        <div class = 'container'>
+        <div class="container1">
             <div class = 'btn-individual'>
             <?= $this->Html->link(__('Add Products'), ['action' => '../Products/add'], ['class' => 'button float-right']) ?>
             </div>
@@ -33,5 +33,4 @@ $this->Html->css('my', ['block' => true]);
     </div>
 
 </body>
-
 </html>
