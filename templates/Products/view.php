@@ -22,7 +22,7 @@ require ROOT . '\templates\Customers\header.php';
             <h3><?= h($product->name) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('Name') ?></th>
+                    <th><?= __('NameName Name') ?></th>
                     <td><?= h($product->name) ?></td>
                 </tr>
                 <tr>
