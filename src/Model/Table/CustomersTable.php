@@ -40,6 +40,13 @@ class CustomersTable extends Table
         $this->setTable('customers');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('Orders', [
+            'foreignKey' => 'customer_id',
+        ]);
+        $this->hasMany('Users', [
+            'foreignKey' => 'customer_id',
+        ]);
     }
 
     /**
@@ -52,7 +59,8 @@ class CustomersTable extends Table
     {
         $validator
             ->integer('id')
-            ->allowEmptyString('id', null, 'create');
+            ->allowEmptyString('id', null, 'create')
+            ->add('id', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->scalar('first_name')
@@ -106,5 +114,19 @@ class CustomersTable extends Table
             ->notEmptyString('marketing_emails');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->isUnique(['id']), ['errorField' => 'id']);
+
+        return $rules;
     }
 }

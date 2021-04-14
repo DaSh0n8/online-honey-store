@@ -40,6 +40,10 @@ class ProductsTable extends Table
         $this->setTable('products');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('OrderLines', [
+            'foreignKey' => 'product_id',
+        ]);
     }
 
     /**
@@ -80,6 +84,13 @@ class ProductsTable extends Table
             ->maxLength('category', 100)
             ->requirePresence('category', 'create')
             ->notEmptyString('category');
+
+        $validator
+            ->allowEmptyFile('image');
+
+        $validator
+            ->integer('quantity')
+            ->allowEmptyString('quantity');
 
         return $validator;
     }

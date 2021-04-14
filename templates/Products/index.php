@@ -1,14 +1,11 @@
 <?php
-define(ROOT,'./');
-
-require ROOT . '\templates\Customers\header.php';
-$this->Html->css('my', ['block' => true]);
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
 ?>
 <div class="products index content">
+    <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Products') ?></h3>
     <div class="table-responsive">
         <table>
@@ -19,6 +16,7 @@ $this->Html->css('my', ['block' => true]);
                     <th><?= $this->Paginator->sort('price') ?></th>
                     <th><?= $this->Paginator->sort('weight') ?></th>
                     <th><?= $this->Paginator->sort('category') ?></th>
+                    <th><?= $this->Paginator->sort('quantity') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -30,6 +28,7 @@ $this->Html->css('my', ['block' => true]);
                     <td><?= $this->Number->format($product->price) ?></td>
                     <td><?= $this->Number->format($product->weight) ?></td>
                     <td><?= h($product->category) ?></td>
+                    <td><?= $this->Number->format($product->quantity) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>

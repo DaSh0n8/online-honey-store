@@ -1,7 +1,4 @@
 <?php
-define(ROOT,'./');
-
-require ROOT . '\templates\Customers\header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
@@ -10,7 +7,7 @@ require ROOT . '\templates\Customers\header.php';
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Action') ?></h4>
+            <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Html->link(__('Edit Product'), ['action' => 'edit', $product->id], ['class' => 'side-nav-item']) ?>
             <?= $this->Form->postLink(__('Delete Product'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
@@ -40,6 +37,10 @@ require ROOT . '\templates\Customers\header.php';
                 <tr>
                     <th><?= __('Weight') ?></th>
                     <td><?= $this->Number->format($product->weight) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Quantity') ?></th>
+                    <td><?= $this->Number->format($product->quantity) ?></td>
                 </tr>
             </table>
             <div class="text">

@@ -1,11 +1,11 @@
 <?php
-require ('header.php');
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Customer[]|\Cake\Collection\CollectionInterface $customers
  */
 ?>
 <div class="customers index content">
+    <?= $this->Html->link(__('New Customer'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Customers') ?></h3>
     <div class="table-responsive">
         <table>

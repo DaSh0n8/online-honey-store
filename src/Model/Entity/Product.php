@@ -14,6 +14,8 @@ use Cake\ORM\Entity;
  * @property string $description
  * @property string $weight
  * @property string $category
+ * @property string|resource|null $image
+ * @property int|null $quantity
  */
 class Product extends Entity
 {
@@ -32,5 +34,7 @@ class Product extends Entity
         'description' => true,
         'weight' => true,
         'category' => true,
+        'image' => true,
+        'quantity' => true,
     ];
 }
