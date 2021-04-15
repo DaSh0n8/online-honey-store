@@ -45,7 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Paul's Honey Iteration 1 Index</title>
+    <title>Paul's Healthy Honey Iteration 1 Index</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -87,13 +87,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="custom-select-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                        <option>¥ JPY</option>
+                        <option>¥ AUD</option>
                         <option>$ USD</option>
-                        <option>€ EUR</option>
                     </select>
                 </div>
                 <div class="right-phone-box">
-                    <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                    <p>Call US :- <a href="#"> 0412 804 035</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
@@ -232,9 +231,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Honey</strong></h1>
-                        <p class="m-b-40">Australia's Favourite <br> Honey.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey </strong></h1>
+                        <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the  <br> highest standard and quality harvested just for you.</
+                        <p> <div class ='btn hvr-hover'>
+                                <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -244,9 +245,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Honey</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey</strong></h1>
+                        <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the  <br> highest standard and quality harvested just for you.</p>
+                        <p> <div class ='btn hvr-hover'>
+                            <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -256,9 +259,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Honeyho</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey</strong></h1>
+                        <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the <br> highest standard and quality harvested just for you.</p>
+                        <p> <div class ='btn hvr-hover'>
+                            <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -277,20 +282,20 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">General Honey</a>
+                    <img class="img-fluid" src="images/honey.png" alt="" />
+                    <a class="btn hvr-hover" href="#">Manuka fact sheet</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Flavoured honey</a>
+                    <img class="img-fluid" src="images/recipes.png" alt="" />
+                    <a class="btn hvr-hover" href="#">Recipes</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    <img class="img-fluid" src="images/reviews.png" alt="" />
+                    <a class="btn hvr-hover" href="#">Reviews</a>
                 </div>
             </div>
         </div>
@@ -340,15 +345,11 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
                         <h3>Social Media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Please connect with us through our social media.</p>
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a  href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -357,9 +358,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
-                        <h4>About Freshshop</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <h4>About Paul's Healthy Honey</h4>
+                        <p>100% Pure Australian Organic Honey. At Paul’s Healthy Honey, we pride ourselves on sourcing the best chemical free and organic honey from hives across Australia. Please check out our exclusive range of honey infusions: Lemon, Cinnamon and Ginger; or our range of premium quality Australian Manuka Honey. </p>
+                        <p>100% Chemical Residue Free.We DO NOT use any heat treatment, artificial additives or syrups in any of our products.
+                            They are free from pesticides; are of premium quality; raw and chemical residue free. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -380,13 +382,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>St Kilda Esplanade Market <br>P.O.Box 382,<br> Caulfield East, <br> VIC 3145.</p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">0412 804 035</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">paulshealthhoney@gmail.com</a></p>
                             </li>
                         </ul>
                     </div>
