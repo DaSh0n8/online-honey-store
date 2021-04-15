@@ -11,6 +11,8 @@ use Cake\Validation\Validator;
 /**
  * Products Model
  *
+ * @property \App\Model\Table\OrderLinesTable&\Cake\ORM\Association\HasMany $OrderLines
+ *
  * @method \App\Model\Entity\Product newEmptyEntity()
  * @method \App\Model\Entity\Product newEntity(array $data, array $options = [])
  * @method \App\Model\Entity\Product[] newEntities(array $data, array $options = [])
@@ -68,6 +70,10 @@ class ProductsTable extends Table
             ->decimal('price')
             ->requirePresence('price', 'create')
             ->notEmptyString('price');
+
+        $validator
+            ->integer('sku')
+            ->allowEmptyString('sku');
 
         $validator
             ->scalar('description')

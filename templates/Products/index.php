@@ -2,13 +2,14 @@
 define(ROOT,'./');
 
 require ROOT . '/templates/Customers/header.php';
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
-
 ?>
 <div class="products index content">
+    <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Products') ?></h3>
     <div class="table-responsive">
         <table>
@@ -17,6 +18,7 @@ require ROOT . '/templates/Customers/header.php';
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('name') ?></th>
                     <th><?= $this->Paginator->sort('price') ?></th>
+                    <th><?= $this->Paginator->sort('sku') ?></th>
                     <th><?= $this->Paginator->sort('weight') ?></th>
                     <th><?= $this->Paginator->sort('category') ?></th>
                     <th><?= $this->Paginator->sort('quantity') ?></th>
@@ -29,6 +31,7 @@ require ROOT . '/templates/Customers/header.php';
                     <td><?= $this->Number->format($product->id) ?></td>
                     <td><?= h($product->name) ?></td>
                     <td><?= $this->Number->format($product->price) ?></td>
+                    <td><?= $this->Number->format($product->sku) ?></td>
                     <td><?= $this->Number->format($product->weight) ?></td>
                     <td><?= h($product->category) ?></td>
                     <td><?= $this->Number->format($product->quantity) ?></td>

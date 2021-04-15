@@ -8,6 +8,12 @@ require ROOT . '/templates/Customers/header.php';
  */
 ?>
 <div class="row">
+    <aside class="column">
+        <div class="side-nav">
+            <h4 class="heading"><?= __('Actions') ?></h4>
+            <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+        </div>
+    </aside>
     <div class="column-responsive column-80">
         <div class="products form content">
             <?= $this->Form->create($product) ?>
@@ -16,6 +22,7 @@ require ROOT . '/templates/Customers/header.php';
                 <?php
                     echo $this->Form->control('name');
                     echo $this->Form->control('price');
+                    echo $this->Form->control('sku');
                     echo $this->Form->control('description');
                     echo $this->Form->control('weight');
                     echo $this->Form->control('category');

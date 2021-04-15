@@ -1,7 +1,7 @@
 <?php
 define(ROOT,'./');
 
-require ROOT . '\templates\Customers\header.php';
+require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
@@ -27,6 +27,7 @@ require ROOT . '\templates\Customers\header.php';
                 <?php
                     echo $this->Form->control('name');
                     echo $this->Form->control('price');
+                    echo $this->Form->control('sku');
                     echo $this->Form->control('description');
                     echo $this->Form->control('weight');
                     echo $this->Form->control('category');
