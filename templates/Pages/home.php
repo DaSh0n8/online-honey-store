@@ -138,7 +138,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="images/logo.png" class="logo" alt=""></a>
+                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="images/logo.png" class="logo" alt="" width="200" height="175"></a>
             </div>
             <!-- End Header Navigation -->
 
@@ -244,7 +244,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Honey</strong></h1>
                         <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                         <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                     </div>
@@ -256,7 +256,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Paul's Honeyho</strong></h1>
                         <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                         <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                     </div>
@@ -278,13 +278,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    <a class="btn hvr-hover" href="#">General Honey</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    <a class="btn hvr-hover" href="#">Flavoured honey</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
