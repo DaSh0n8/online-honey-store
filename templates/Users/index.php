@@ -1,4 +1,7 @@
 <?php
+define(ROOT,'./');
+
+require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
@@ -11,18 +14,24 @@
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('customer_id') ?></th>
-                    <th><?= $this->Paginator->sort('username') ?></th>
+                    <th><?= $this->Paginator->sort('id') ?></th>
+                    <th><?= $this->Paginator->sort('email') ?></th>
                     <th><?= $this->Paginator->sort('password') ?></th>
+                    <th><?= $this->Paginator->sort('role') ?></th>
+                    <th><?= $this->Paginator->sort('created') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
                 <tr>
-                    <td><?= $this->Number->format($user->customer_id) ?></td>
-                    <td><?= h($user->username) ?></td>
+                    <td><?= $this->Number->format($user->id) ?></td>
+                    <td><?= h($user->email) ?></td>
                     <td><?= h($user->password) ?></td>
+                    <td><?= h($user->role) ?></td>
+                    <td><?= h($user->created) ?></td>
+                    <td><?= h($user->modified) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $user->customer_id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->customer_id]) ?>

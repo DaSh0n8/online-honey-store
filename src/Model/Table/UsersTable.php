@@ -24,6 +24,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class UsersTable extends Table
 {
@@ -40,6 +42,8 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('customer_id');
         $this->setPrimaryKey('customer_id');
+
+        $this->addBehavior('Timestamp');
     }
 
     /**
@@ -51,20 +55,25 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->integer('customer_id')
-            ->allowEmptyString('customer_id', null, 'create');
+            ->nonNegativeInteger('id')
+            ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('username')
-            ->maxLength('username', 50)
-            ->requirePresence('username', 'create')
-            ->notEmptyString('username');
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmptyString('email');
 
         $validator
             ->scalar('password')
-            ->maxLength('password', 50)
+            ->maxLength('password', 255)
             ->requirePresence('password', 'create')
             ->notEmptyString('password');
+
+        $validator
+            ->scalar('role')
+            ->maxLength('role', 20)
+            ->requirePresence('role', 'create')
+            ->notEmptyString('role');
 
         return $validator;
     }
@@ -78,7 +87,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules): RulesChecker
     {
-        $rules->add($rules->isUnique(['username']), ['errorField' => 'username']);
+        $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
 
         return $rules;
     }

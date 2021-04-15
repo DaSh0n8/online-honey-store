@@ -1,4 +1,7 @@
 <?php
+define(ROOT,'./');
+
+require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -22,8 +25,10 @@
             <fieldset>
                 <legend><?= __('Edit User') ?></legend>
                 <?php
-                    echo $this->Form->control('username');
+                    echo $this->Form->control('id');
+                    echo $this->Form->control('email');
                     echo $this->Form->control('password');
+                    echo $this->Form->control('role');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

@@ -1,11 +1,13 @@
 <?php
+define(ROOT,'./');
+
+require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Order[]|\Cake\Collection\CollectionInterface $orders
  */
 ?>
 <div class="orders index content">
-    <?= $this->Html->link(__('New Order'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Orders') ?></h3>
     <div class="table-responsive">
         <table>

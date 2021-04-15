@@ -28,6 +28,12 @@ $this->Html->css('my', ['block' => true]);
             <div class = 'btn-individual'>
                 <?= $this->Html->link(__('Add Products'), ['action' => '../Products/add'], ['class' => 'button float-right']) ?>
             </div>
+            <div class = 'btn-individual'>
+                <?= $this->Html->link(__('List Orders'), ['action' => '../Orders/index'], ['class' => 'button float-right']) ?>
+            </div>
+            <div class = 'btn-individual'>
+                <?= $this->Html->link(__('List Users'), ['action' => '../Users/index'], ['class' => 'button float-right']) ?>
+            </div>
         </div>
 </div>
     </div>
