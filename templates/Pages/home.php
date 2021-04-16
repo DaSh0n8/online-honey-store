@@ -144,7 +144,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class = 'nav-item active'>
+                        <?= $this->Html->link(__('Home'), ['action' => '../Pages/home']) ?>
+                    </li>
                     <li class = 'nav-item'>
                         <?= $this->Html->link(__('About Us'), ['action' => '../Pages/about']) ?>
                     </li>
