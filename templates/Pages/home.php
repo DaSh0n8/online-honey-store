@@ -277,19 +277,19 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/honey.png" alt="" />
-                    <a class="btn hvr-hover" href="/team062-app/pages/factsheet">Manuka fact sheet</a>
+                    <?= $this->Html->link(__('Manuka fact sheet'), ['action' => '../Pages/factsheet']) ?>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/recipes.png" alt="" />
-                    <a class="btn hvr-hover" href="/team062-app/pages/recipe">Recipes</a>
+                    <?= $this->Html->link(__('Recipe'), ['action' => '../Pages/recipe']) ?>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/reviews.png" alt="" />
-                    <a class="btn hvr-hover" href="#">Reviews</a>
+                    <?= $this->Html->link(__('Reviews'), ['action' => '../Pages/reviews']) ?>
                 </div>
             </div>
         </div>
