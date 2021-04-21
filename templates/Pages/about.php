@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- Basic -->
 <?php
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
@@ -23,9 +20,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
-
 $this->disableAutoLayout();
-
 
 if (!Configure::read('debug')) :
     throw new NotFoundException(
@@ -42,23 +37,25 @@ require("header.php");
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-<!-- Bootstrap CSS -->
-<?= $this->Html->css('bootstrap.min') ?>
-
-<!-- Site CSS -->
-<?= $this->Html->css('style') ?>
-
-<!-- Responsive CSS -->
-<?= $this->Html->css('responsive') ?>
-
-<!-- Custom CSS -->
-<?= $this->Html->css('custom') ?>
-
-<?= $this->fetch('meta') ?>
-<?= $this->fetch('css') ?>
-<?= $this->fetch('script') ?>
-
+<head>
     <?= $this->Html->charset() ?>
+    <!-- Bootstrap CSS -->
+    <?= $this->Html->css('bootstrap.min') ?>
+
+    <!-- Site CSS -->
+    <?= $this->Html->css('style') ?>
+
+    <!-- Responsive CSS -->
+    <?= $this->Html->css('responsive') ?>
+
+    <!-- Custom CSS -->
+    <?= $this->Html->css('custom') ?>
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Mobile Metas -->
@@ -96,6 +93,7 @@ require("header.php");
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+</head>
 
 <!-- Start Top Search -->
 <div class="top-search">
@@ -134,6 +132,7 @@ require("header.php");
                 </div>
             </div>
             <div class="col-lg-6">
+                <a class="navbar-brand"><img src=".../images/honey.png" class="logo" alt="photo of honey" width="300" height="300"></a>
                 <h2 class="noo-sh-title-top">Welcome to <span>Paul's Healthy Honey</span></h2>
                 <p>
                     Our honey is 100% Australian, organic and chemical residue free, is of the highest standard and quality harvested just for you.</p>>

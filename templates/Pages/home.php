@@ -276,7 +276,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/honey.png" alt="" />
+                    <a class = "btn hvr-hover"></a>
                     <?= $this->Html->link(__('Manuka fact sheet'), ['action' => '../Pages/factsheet']) ?>
+
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
