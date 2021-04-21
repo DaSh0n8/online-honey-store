@@ -110,7 +110,15 @@ require("header.php");
                     <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-11">
+                    <img src="../webroot/images/factsheetpic.png"
+                         class="logo" alt="" width="400"
+                         height="300"></a>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="col-lg-11">
                     <h2 class="noo-sh-title-top">What <span>makes our honey so special?</span></h2>
                     <p>One of the most amazing things about the antibacterial activity of Manuka honey is that although bacteria that cause serious infections can develop resistance to our modern antibiotics (which is how they become superbugs), they cannot develop resistance to the activity of Manuka honey (Blair et al. 2009).
 
@@ -125,98 +133,11 @@ require("header.php");
                         Various species of the Manuka plant produce different levels of DHA that give rise to the varying antibacterial potencies of this special honey.
 
                         Scientists looking at Australian honeys have found a number of sources of Manuka with exceptionally high levels of activity. (Cokcetin et al. 2016; Windsor et al. 2012).</p>
-</div>
+                </div>
             </div>
         </div>
     </div>
     <!-- End About Page -->
-
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Instagram Feed  -->
 
 
     <!-- Start Footer  -->
@@ -239,7 +160,7 @@ require("header.php");
                             <ul>
                                 <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCkAJRCv4n8txNXAWaUgFssA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>

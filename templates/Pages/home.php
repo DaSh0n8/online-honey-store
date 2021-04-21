@@ -331,7 +331,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <ul>
                             <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCkAJRCv4n8txNXAWaUgFssA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>

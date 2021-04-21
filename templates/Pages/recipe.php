@@ -121,100 +121,58 @@ require("header.php");
                     - 3 teaspoons sunflower seeds<br>
                     - Water as needed<br>
                 </p>
-
+            </div>
+            <div class="col-lg-5">
+                <h2 class="noo-sh-title-top">PAUL'S HEALTHY <span>CINNAMON CHAI PORRIDGE </span></h2>
+                <p>Ingredients:<br>
+                    - 1/2 cup water <br>
+                    - 1/2 cup rolled oats<br>
+                    - 1/2 banana<br>
+                    - 1 teaspoon ground cinnamon<br>
+                    - 1/2 teaspoon ground ginger<br>
+                    - 1/4 teaspoon ground cardamon<br>
+                    - 1 tablespoon of chia seeds<br>
+                    - 1 tablespoon of hemp powder (optional)<br>
+                    - 1/2 cup of milk of choice (I used rice milk)<br>
+                    Toppings:<br>
+                    - 1-2 teaspoons of Paul’s Healthy cinnamon honey<br>
+                    - 1/2 banana<br>
+                    - 1-2 teaspoons of hulled tahini<br>
+                    - A handful of crushed walnuts<br>
+                </p>
+            </div>
+            <div class="col-lg-10">
+                <h2 class="noo-sh-title-top">PAUL'S GINGER <span>HONEY SOY SALMON RECIPE</span></h2>
+                <p>Ingredients:<br>
+                    - 1 large fillet of salmon (around 130g)<br>
+                    Marinade:<br>
+                    - 2 tablespoons of soy sauce<br>
+                    - 1 teaspoon of sesame oil<br>
+                    - 1 tablespoon of Paul’s Healthy ginger honey<br>
+                    - 1 teaspoon of Olive oil or oil spray<br>
+                </p>
+            </div>
+            <div class="col-lg-10">
+                <h2 class="noo-sh-title-top">PAUL'S HEALTHY CINNAMON  <span>HONEY CARROT CAKE RECIPE</span></h2>
+                <p>Ingredients:<br>
+                    - 2 eggs (whites and yolks separated)<br>
+                    - ¾ cup of rolled oats (can substitute for a flour)<br>
+                    - 1 cup of almond meal<br>
+                    - 1 teaspoon baking powder<br>
+                    - 1 tablespoon cinnamon<br>
+                    - 1 ripe banana<br>
+                    - 2 tablespoons of Paul’s Healthy Cinnamon honey<br>
+                    - 1 teaspoon of vanilla extract<br>
+                    - 3 teaspoons of olive oil<br>
+                    - 5 pitted dates<br>
+                    - ¼ cup walnuts (plus extra for topping)<br>
+                    - 2 large carrots, washed and grated<br>
+                </p>
             </div>
         </div>
     </div>
 </div>
 <!-- End About Page -->
-
-<!-- Start Instagram Feed  -->
-<div class="instagram-box">
-    <div class="main-instagram owl-carousel owl-theme">
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-01.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-02.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-03.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-04.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-05.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-06.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-07.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-08.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-09.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-05.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Instagram Feed  -->
-
 
 <!-- Start Footer  -->
 <footer>
@@ -236,7 +194,7 @@ require("header.php");
                         <ul>
                             <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCkAJRCv4n8txNXAWaUgFssA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
