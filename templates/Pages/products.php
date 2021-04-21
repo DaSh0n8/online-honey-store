@@ -133,36 +133,30 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="dropdown active">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="shop.html">Sidebar Shop</a></li>
-                            <li><a href="shop-detail.html">Shop Detail</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="my-account.html">My Account</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                        </ul>
+                    <li class = 'nav-item'>
+                        <?= $this->Html->link(__('Home'), ['action' => '../']) ?>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class = 'nav-item'>
+                        <?= $this->Html->link(__('About Us'), ['action' => '../Pages/about']) ?>
+                    </li>
+                    <li class = 'nav-item'>
+                        <?= $this->Html->link(__('Products'), ['action' => '../Pages/products']) ?>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
 
             <!-- Start Atribute Navigation -->
-            <div class="attr-nav">
-                <ul>
-                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li class="side-menu"><a href="#">
-                            <i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-                            <p>My Cart</p>
-                        </a></li>
-                </ul>
-            </div>
+<!--            <div class="attr-nav">-->
+<!--                <ul>-->
+<!--                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>-->
+<!--                    <li class="side-menu"><a href="#">-->
+<!--                            <i class="fa fa-shopping-bag"></i>-->
+<!--                            <span class="badge">3</span>-->
+<!--                            <p>My Cart</p>-->
+<!--                        </a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
             <!-- End Atribute Navigation -->
         </div>
         <!-- Start Side Menu -->
@@ -215,7 +209,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Shop</h2>
+                <h2>Our Products</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item active">Shop</li>
@@ -266,7 +260,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
                                                 </div>
                                                 <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -280,7 +273,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                             </div>
                                             <div class="why-text">
                                                 <h4>Manuka Honey 40+</h4>
-                                                <h5> $9.79</h5>
+                                                <h5> $29.95</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -309,7 +302,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
+
                                                 </div>
                                                 <img src="images/honey.png" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -352,7 +345,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
                                                 </div>
                                                 <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -374,7 +366,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
                                                 </div>
                                                 <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -396,7 +387,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
                                                 </div>
                                                 <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -418,7 +408,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
                                                 <div class="type-lb">
-                                                    <p class="sale">Sale</p>
                                                 </div>
                                                 <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
                                                 <div class="mask-icon">
@@ -746,48 +735,12 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
-                        <h3>Newsletter</h3>
-                        <form class="newsletter-box">
-                            <div class="form-group">
-                                <input class="" type="email" name="Email" placeholder="Email Address*" />
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <button class="btn hvr-hover" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
                         <h3>Social Media</h3>
                         <p>Please connect with us through our social media.</p>
                         <ul>
                             <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a  href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-widget">
-                        <h4>About Paul's Healthy Honey</h4>
-                        <p>100% Pure Australian Organic Honey. At Paul’s Healthy Honey, we pride ourselves on sourcing the best chemical free and organic honey from hives across Australia. Please check out our exclusive range of honey infusions: Lemon, Cinnamon and Ginger; or our range of premium quality Australian Manuka Honey. </p>
-                        <p>100% Chemical Residue Free.We DO NOT use any heat treatment, artificial additives or syrups in any of our products.
-                            They are free from pesticides; are of premium quality; raw and chemical residue free. </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-link">
-                        <h4>Information</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -808,8 +761,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 </footer>
 <!-- End Footer  -->
 
