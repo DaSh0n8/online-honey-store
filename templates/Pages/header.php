@@ -102,7 +102,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <li><a href="#"><i
                                     class="fa fa-user s_color"></i><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
                             </a></li>
-                        <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
                     </ul>
                 </div>
             </div>

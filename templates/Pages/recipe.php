@@ -97,7 +97,7 @@ require("header.php");
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Recipes</h2>
+                <h2>RECIPES</h2>
             </div>
         </div>
     </div>

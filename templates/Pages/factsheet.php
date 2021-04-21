@@ -95,7 +95,7 @@ require("header.php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Manuka fact sheet</h2>
+                    <h2>MANUKA FACT SHEET</h2>
                 </div>
             </div>
         </div>
