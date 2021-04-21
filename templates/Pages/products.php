@@ -33,6 +33,10 @@ $this->Html->css(' style', ['block' => true]);
 $this->Html->css('responsive', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
+ */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -126,7 +130,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""  width="200" height="175"></a>
+                <a class="navbar-brand" href="index.html"><img src="../webroot/images/logo.png" class="logo" alt=""  width="200" height="175"></a>
             </div>
             <!-- End Header Navigation -->
 

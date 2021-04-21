@@ -57,6 +57,12 @@ class ProductsController extends AppController
             $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
         $this->set(compact('product'));
+        $article = $this->Products->newEntity($this->request->getData());
+
+// Prior to 3.4 use $article->errors()
+        if ($article->getErrors()) {
+            // Entity failed validation.
+        }
     }
 
     /**
