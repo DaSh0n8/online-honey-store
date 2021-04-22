@@ -8,7 +8,7 @@ require ROOT . '/templates/Customers/header.php';
  */
 ?>
 <div class="users index content">
-    <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">
         <table>
@@ -33,9 +33,9 @@ require ROOT . '/templates/Customers/header.php';
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $user->customer_id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->customer_id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->customer_id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->customer_id)]) ?>
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
