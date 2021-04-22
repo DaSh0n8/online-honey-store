@@ -128,15 +128,15 @@ require("header.php");
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
-                </div>
+                <img class="img-fluid" src="images/honey.png" alt="" height="300"/>
+
+                    <img src="images/honey.png" alt="" height="300">
             </div>
             <div class="col-lg-6">
-                <a class="navbar-brand"><img src=".../images/honey.png" class="logo" alt="photo of honey" width="300" height="300"></a>
+
                 <h2 class="noo-sh-title-top">Welcome to <span>Paul's Healthy Honey</span></h2>
                 <p>
                     Our honey is 100% Australian, organic and chemical residue free, is of the highest standard and quality harvested just for you.</p>>
-                <a class="btn hvr-hover" href="#">Read More</a>
             </div>
         </div>
         <div class="row my-5">

@@ -142,8 +142,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="../webroot/images/logo.png"
-                                                                                  class="logo" alt="" width="200"
-                                                                                  height="175"></a>
+                                                                                  class="logo" alt="" height="100"></a>
             </div>
             <!-- End Header Navigation -->
 
