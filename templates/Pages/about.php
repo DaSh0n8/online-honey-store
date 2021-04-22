@@ -130,7 +130,7 @@ require("header.php");
             <div class="col-lg-6">
                 <img class="img-fluid" src="images/honey.png" alt="" height="300"/>
 
-                    <img src="images/honey.png" alt="" height="300">
+                    <img src="../webroot/images/honey.png" alt="" height="300">
             </div>
             <div class="col-lg-6">
 
@@ -159,123 +159,10 @@ require("header.php");
             </div>
 
         </div>
-        <div class="row my-4">
-            <div class="col-12">
-                <h2 class="noo-sh-title">What Customers Think...
-                </h2>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="images/img-1.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Williamson</h3> <span class="post">
-Margaret Berwick, Melbourne</span> </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fab fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-youtube"></a>
-                            </li>
-                        </ul>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-                        <p>"I'm a cancer survivor and I take Paul's 260+ everyday and my immune system has improved dramatically and it also tastes great</p>
-                    </div>
-                    <hr class="my-0"> </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="images/img-2.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Kristiana</h3> <span class="post">Jason
-Hong Kong</span> </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fab fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-youtube"></a>
-                            </li>
-                        </ul>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-                        <p>"I gave the 260+ to my 7 year old son who had been diagnosed with coronavirus and within two days his sore throat and temperature subsided and he was tested negative after 4 days."</p>                    </div>
-                    <hr class="my-0"> </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="images/img-3.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Steve Thomas</h3> <span class="post">
-Sur
-Rosebud, Victoria</span> </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fab fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-youtube"></a>
-                            </li>
-                        </ul>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-<p>"Paul's honeys are my favourite and we love the cinnamon with our chai."
-</p>                    </div>
-                    <hr class="my-0"> </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="hover-team">
-                    <div class="our-team"> <img src="images/img-1.jpg" alt="" />
-                        <div class="team-content">
-                            <h3 class="title">Williamson</h3> <span class="post">Ming
-Box Hill, Melbourne</span> </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fab fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-youtube"></a>
-                            </li>
-                        </ul>
-                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                    </div>
-                    <div class="team-description">
-<p>
-    "I love the 40+ honey and take it everyday and give it to my family and it tastes great and the price is excellent."</p>
-                    </div>
-                    <hr class="my-0"> </div>
-            </div>
+
         </div>
     </div>
-</div>
+
 <!-- End About Page -->
 
 <!-- Start Instagram Feed  -->

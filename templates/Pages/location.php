@@ -41,7 +41,7 @@ require("header.php");
 ?>
 <div class = row>
     <div class = column>
-        <div style = "position:relative;">
+        <div style = "position:relative">
             <a href="https://www.google.com/maps/place/8+Station+St,+Caulfield+North+VIC+3161/@-37.8655924,144.9720865,17z/data=!4m12!1m6!3m5!1s0x6ad6686ff6d9d34f:0xf34a2fcff682f9f0!2sSt+Kilda+Esplanade+Market!8m2!3d-37.8655924!4d144.9742752!3m4!1s0x6ad66992f2094035:0xc4315dfb4bf63274!8m2!3d-37.8767363!4d145.036677
 " class="photo"><img src="../webroot/images/map.jpg" class="cart-thumb" alt="" /></a>
         </div>

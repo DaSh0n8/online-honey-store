@@ -39,19 +39,6 @@ $this->Html->css('min', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 require("header.php");
 ?>
-<div class="all-title-box">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>REVIEWS</h2>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">REVIEWS</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="row my-4">
     <div class="col-12">
         <h2 class="noo-sh-title">What Customers Think...
@@ -59,7 +46,7 @@ require("header.php");
     </div>
     <div class="col-sm-6 col-lg-3">
         <div class="hover-team">
-            <div class="our-team"> <img src="images/img-1.jpg" alt="" />
+            <div class="our-team"> <img src="../webroot/images/img-1.jpg" alt="" />
                 <div class="team-content">
                     <h3 class="title">Williamson</h3> <span class="post">
 Margaret Berwick, Melbourne</span> </div>
@@ -86,7 +73,7 @@ Margaret Berwick, Melbourne</span> </div>
     </div>
     <div class="col-sm-6 col-lg-3">
         <div class="hover-team">
-            <div class="our-team"> <img src="images/img-2.jpg" alt="" />
+            <div class="our-team"> <img src="../webroot/images/img-2.jpg" alt="" />
                 <div class="team-content">
                     <h3 class="title">Kristiana</h3> <span class="post">Jason
 Hong Kong</span> </div>
@@ -112,7 +99,7 @@ Hong Kong</span> </div>
     </div>
     <div class="col-sm-6 col-lg-3">
         <div class="hover-team">
-            <div class="our-team"> <img src="images/img-3.jpg" alt="" />
+            <div class="our-team"> <img src="../webroot/images/img-3.jpg" alt="" />
                 <div class="team-content">
                     <h3 class="title">Steve Thomas</h3> <span class="post">
 Sur
@@ -140,7 +127,7 @@ Rosebud, Victoria</span> </div>
     </div>
     <div class="col-sm-6 col-lg-3">
         <div class="hover-team">
-            <div class="our-team"> <img src="images/img-1.jpg" alt="" />
+            <div class="our-team"> <img src="../webroot/images/img-1.jpg" alt="" />
                 <div class="team-content">
                     <h3 class="title">Williamson</h3> <span class="post">Ming
 Box Hill, Melbourne</span> </div>
@@ -167,45 +154,44 @@ Box Hill, Melbourne</span> </div>
             <hr class="my-0"> </div>
     </div>
 </div>
-
-<footer>
-    <div class="footer-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Business Time</h3>
-                        <ul class="list-time">
-                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-                        </ul>
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Social Media</h3>
+                            <p>Please connect with us through our social media.</p>
+                            <ul>
+                                <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCkAJRCv4n8txNXAWaUgFssA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>St Kilda Esplanade Market <br>P.O.Box 382,<br> Caulfield East, <br> VIC 3145.</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">0412 804 035</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">paulshealthhoney@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Social Media</h3>
-                        <p>Please connect with us through our social media.</p>
-                        <ul>
-                            <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-link-contact">
-                        <h4>Contact Us</h4>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>St Kilda Esplanade Market <br>P.O.Box 382,<br> Caulfield East, <br> VIC 3145.</p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">0412 804 035</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">paulshealthhoney@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-</footer>
+    </footer>
