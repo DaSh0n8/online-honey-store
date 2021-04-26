@@ -23,6 +23,13 @@ class ProductsController extends AppController
         $this->set(compact('products'));
     }
 
+    public function index2()
+    {
+        $products = $this->paginate($this->Products);
+
+        $this->set(compact('products'));
+    }
+
     /**
      * View method
      *

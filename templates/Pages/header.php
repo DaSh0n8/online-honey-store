@@ -158,6 +158,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     <li class='nav-item'>
                         <?= $this->Html->link(__('Products'), ['action' => '../Pages/products']) ?>
                     </li>
+                    <li class='nav-item'>
+                        <?= $this->Html->link(__('Products2'), ['action' => '../Products/index2']) ?>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

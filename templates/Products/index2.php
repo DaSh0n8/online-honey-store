@@ -12,6 +12,7 @@
  * @since     0.10.0
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
@@ -33,7 +34,7 @@ $this->Html->css(' style', ['block' => true]);
 $this->Html->css('responsive', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
-require("header.php");
+require("../templates/Pages/header.php");
 ?>
 <!-- Start Top Search -->
 <div class="top-search">
@@ -64,6 +65,12 @@ require("header.php");
 <!-- End All Title Box -->
 
 <!-- Start Shop Page  -->
+<?php foreach ($products as $product): ?>
+    <tr>
+        <td><?= h($product->name) ?></td>
+        <td><?= $this->Number->format($product->price) ?></td>
+    </tr>
+<?php endforeach; ?>
 <div class="shop-box-inner">
     <div class="container">
         <div class="row">
