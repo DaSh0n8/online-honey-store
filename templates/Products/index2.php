@@ -83,7 +83,7 @@ require("../templates/Pages/header.php");
                                     <option value="4">Best Selling</option>
                                 </select>
                             </div>
-                            <p>Showing all 10 results</p>
+                            <p>Showing all 4 results</p>
                         </div>
                         <div class="col-12 col-sm-4 text-center text-sm-right">
                             <ul class="nav nav-tabs ml-auto">
@@ -96,38 +96,32 @@ require("../templates/Pages/header.php");
                             </ul>
                         </div>
                     </div>
-                    <-PRODUCT DISPLAY -->
-                    <div class="product-categorie-box">
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
-                                <div class="row">
-                                            <?php foreach ($products as $product): ?>
-                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                                <div class="products-single fix">
-                                                    <div class="box-img-hover">
-                                                        <div class="type-lb">
-                                                        </div>
-                                                        <img src="../webroot/images/manuka-160.jpg" class="img-fluid" alt="Image">
-                                                        <div class="mask-icon">
-                                                            <ul>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                            </ul>
-                                                            <a class="cart" href="#">Add to Cart</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="why-text">
-                                                        <h4><?= h($product->name) ?></h4>
-                                                        <h5> $ <?= $this->Number->format($product->price) ?></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php endforeach; ?>
+
+                    <?php foreach ($products as $product): ?>
+                        <tr>
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <div class="type-lb">
+                                        </div>
+                                        <img src="images/img-pro-02.jpg"  class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="#">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                    <div class="why-text">
+                                        <td><?= h($product->name) ?></td>
+                                        <td><?= $this->Number->format($product->price) ?></td>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </tr>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
@@ -144,15 +138,15 @@ require("../templates/Pages/header.php");
                         </div>
                         <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Manuka Honey<small class="text-muted">(3)</small>
+                                <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Fruits & Drinks <small class="text-muted">(100)</small>
                                 </a>
                                 <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
 
                                 </div>
                             </div>
                             <div class="list-group-collapse sub-men">
-                                <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">General Honey
-                                    <small class="text-muted">(8)</small>
+                                <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Vegetables
+                                    <small class="text-muted">(50)</small>
                                 </a>
                                 <div class="collapse" id="sub-men2" data-parent="#list-group-men">
                                 </div>
@@ -174,12 +168,96 @@ require("../templates/Pages/header.php");
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- End Shop Page -->
+
+<!-- Start Instagram Feed  -->
+<div class="instagram-box">
+    <div class="main-instagram owl-carousel owl-theme">
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-01.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-02.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-03.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-04.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-05.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-06.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-07.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-08.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-09.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="images/instagram-img-05.jpg" alt="" />
+                <div class="hov-in">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- End Shop Page -->
+<!-- End Instagram Feed  -->
 
 
 <!-- Start Footer  -->
