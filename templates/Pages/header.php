@@ -89,7 +89,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="custom-select-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                        <option>¥ AUD</option>
+                        <option>$ AUD</option>
                         <option>$ USD</option>
                     </select>
                 </div>

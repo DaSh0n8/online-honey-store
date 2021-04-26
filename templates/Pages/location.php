@@ -39,17 +39,65 @@ $this->Html->css('min', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 require("header.php");
 ?>
-<div class = row>
-    <div class = column>
-        <div style = "position:relative">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?= $this->Html->charset() ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Paul's Healthy Honey Iteration 1 Index</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <?= $this->Html->meta('icon') ?>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <?= $this->Html->css('bootstrap.min') ?>
+
+    <!-- Site CSS -->
+    <?= $this->Html->css('style') ?>
+
+    <!-- Responsive CSS -->
+    <?= $this->Html->css('responsive') ?>
+
+    <!-- Custom CSS -->
+    <?= $this->Html->css('custom') ?>
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .img-container{ {
+            text-align: center;
+        }}
+    </style>
+
+</head>
+
+<body>
+        <div class = "img-container">
             <a href="https://www.google.com/maps/place/8+Station+St,+Caulfield+North+VIC+3161/@-37.8655924,144.9720865,17z/data=!4m12!1m6!3m5!1s0x6ad6686ff6d9d34f:0xf34a2fcff682f9f0!2sSt+Kilda+Esplanade+Market!8m2!3d-37.8655924!4d144.9742752!3m4!1s0x6ad66992f2094035:0xc4315dfb4bf63274!8m2!3d-37.8767363!4d145.036677
-" class="photo"><img src="../webroot/images/map.jpg" class="cart-thumb" alt="" /></a>
+" class="photo" target="_blank"><img src="../webroot/images/map.jpg" class="cart-thumb" alt="" width="700" height="500" /></a>
         </div>
-    </div>
-    <div class = column>
+    <div class = "col-lg-2">
         St Kilda Esplanade Market P.O.Box 382, Caulfield East, VIC 3145.
     </div>
-</div>
+
 
 
 
@@ -94,3 +142,24 @@ require("header.php");
                 </div>
             </div>
 </footer>
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+<!-- ALL JS FILES -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/jquery.superslides.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/inewsticker.js"></script>
+<script src="js/bootsnav.js."></script>
+<script src="js/images-loded.min.js"></script>
+<script src="js/isotope.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/baguetteBox.min.js"></script>
+<script src="js/form-validator.min.js"></script>
+<script src="js/contact-form-script.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

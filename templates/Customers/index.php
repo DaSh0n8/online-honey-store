@@ -6,6 +6,7 @@
 require('header.php')
 ?>
 <div class="customers index content">
+    <?= $this->Html->link(__('New Customer'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Customers') ?></h3>
     <div class="table-responsive">
         <table>
@@ -30,11 +31,11 @@ require('header.php')
                     <td><?= $this->Number->format($customer->id) ?></td>
                     <td><?= h($customer->first_name) ?></td>
                     <td><?= h($customer->last_name) ?></td>
-                    <td><?= $this->Number->format($customer->phone_number) ?></td>
+                    <td><?= h($customer->phone_number) ?></td>
                     <td><?= h($customer->email_address) ?></td>
                     <td><?= h($customer->street_address) ?></td>
                     <td><?= h($customer->suburb) ?></td>
-                    <td><?= $this->Number->format($customer->post_code) ?></td>
+                    <td><?= h($customer->post_code) ?></td>
                     <td><?= h($customer->state) ?></td>
                     <td><?= h($customer->marketing_emails) ?></td>
                     <td class="actions">

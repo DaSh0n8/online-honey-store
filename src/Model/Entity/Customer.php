@@ -11,11 +11,11 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $first_name
  * @property string $last_name
- * @property int $phone_number
+ * @property string $phone_number
  * @property string $email_address
  * @property string $street_address
  * @property string $suburb
- * @property int $post_code
+ * @property string $post_code
  * @property string $state
  * @property bool $marketing_emails
  *

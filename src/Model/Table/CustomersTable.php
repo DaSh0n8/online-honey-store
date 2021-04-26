@@ -74,7 +74,8 @@ class CustomersTable extends Table
             ->notEmptyString('last_name');
 
         $validator
-            ->integer('phone_number')
+            ->scalar('phone_number')
+            ->maxLength('phone_number', 100)
             ->requirePresence('phone_number', 'create')
             ->notEmptyString('phone_number');
 
@@ -97,13 +98,14 @@ class CustomersTable extends Table
             ->notEmptyString('suburb');
 
         $validator
-            ->integer('post_code')
+            ->scalar('post_code')
+            ->maxLength('post_code', 10)
             ->requirePresence('post_code', 'create')
             ->notEmptyString('post_code');
 
         $validator
             ->scalar('state')
-            ->maxLength('state', 100)
+            ->maxLength('state', 10)
             ->requirePresence('state', 'create')
             ->notEmptyString('state');
 

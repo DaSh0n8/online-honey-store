@@ -31,5 +31,21 @@ $this->Html->css('sb-admin-2', ['block' => true]);
 $this->Html->css('sb-admin-2.min.css', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<main class="main">
+    <div class="container">
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>

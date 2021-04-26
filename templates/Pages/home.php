@@ -230,7 +230,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey </strong></h1>
                         <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the  <br> highest standard and quality harvested just for you.</
                         <p> <div class ='btn hvr-hover'>
-                                <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                                <?= $this->Html->link(__('Shop Now'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
                         </p>
                     </div>
                 </div>
@@ -244,7 +244,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey</strong></h1>
                         <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the  <br> highest standard and quality harvested just for you.</p>
                         <p> <div class ='btn hvr-hover'>
-                            <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                            <?= $this->Html->link(__('Shop Now'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
                         </p>
                     </div>
                 </div>
@@ -258,7 +258,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <h1 class="m-b-20"><strong>Welcome To <br> Paul's Healthy Honey</strong></h1>
                         <p class="m-b-40">Our honey is 100% Australian, organic and chemical residue free, is of the <br> highest standard and quality harvested just for you.</p>
                         <p> <div class ='btn hvr-hover'>
-                            <?= $this->Html->link(__('Shop New'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
+                            <?= $this->Html->link(__('Shop Now'), ['action' => '../Pages/products'],['class' => 'button float-right']) ?> </div>
                         </p>
                     </div>
                 </div>
@@ -279,7 +279,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="images/honey.png" alt="" />
-                    <a class = "btn hvr-hover"></a>
                     <?= $this->Html->link(__('Manuka fact sheet'), ['action' => '../Pages/factsheet']) ?>
 
                 </div>

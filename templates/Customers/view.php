@@ -28,6 +28,10 @@ require('header.php')
                     <td><?= h($customer->last_name) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Phone Number') ?></th>
+                    <td><?= h($customer->phone_number) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Email Address') ?></th>
                     <td><?= h($customer->email_address) ?></td>
                 </tr>
@@ -40,20 +44,16 @@ require('header.php')
                     <td><?= h($customer->suburb) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Post Code') ?></th>
+                    <td><?= h($customer->post_code) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('State') ?></th>
                     <td><?= h($customer->state) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($customer->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Phone Number') ?></th>
-                    <td><?= $this->Number->format($customer->phone_number) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Post Code') ?></th>
-                    <td><?= $this->Number->format($customer->post_code) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Marketing Emails') ?></th>
