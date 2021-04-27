@@ -10,7 +10,9 @@
         "cakephp/cakephp": "~4.2.0",
         "cakephp/migrations": "^3.0",
         "cakephp/plugin-installer": "^1.3",
-        "mobiledetect/mobiledetectlib": "^2.8"
+        "hakito/cakephp-paypal-rest-plugin": "v3.0.0.1",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
         "cakephp/bake": "^2.3",

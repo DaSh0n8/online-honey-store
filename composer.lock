@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07ce6cf3ee59c47e19226d5b0bce36c1",
+    "content-hash": "b6fb9e0165c4f9cc365d51c2e2a54640",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -422,6 +422,60 @@
             "time": "2021-01-12T12:10:35+00:00"
         },
         {
+            "name": "hakito/cakephp-paypal-rest-plugin",
+            "version": "v3.0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hakito/CakePHP-PayPalRest-Plugin.git",
+                "reference": "b4f2234a2322ab441479ee340b8191374344337e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hakito/CakePHP-PayPalRest-Plugin/zipball/b4f2234a2322ab441479ee340b8191374344337e",
+                "reference": "b4f2234a2322ab441479ee340b8191374344337e",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^4.0",
+                "paypal/rest-api-sdk-php": ">=1.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "PayPal"
+            },
+            "autoload": {
+                "psr-4": {
+                    "PayPal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gerd Katzenbeisser",
+                    "homepage": "https://github.com/hakito/CakePHP-PayPalRest-Plugin/graphs/contributors"
+                }
+            ],
+            "description": "PayPal plugin for CakePHP using the REST api",
+            "homepage": "https://github.com/hakito/CakePHP-PayPalRest-Plugin",
+            "keywords": [
+                "cakephp",
+                "payment",
+                "paypal",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/hakito/CakePHP-PayPalRest-Plugin/issues",
+                "source": "https://github.com/hakito/CakePHP-PayPalRest-Plugin/tree/master"
+            },
+            "time": "2020-08-08T09:02:48+00:00"
+        },
+        {
             "name": "laminas/laminas-diactoros",
             "version": "2.5.0",
             "source": {
@@ -792,6 +846,60 @@
                 }
             ],
             "time": "2021-02-19T21:22:57+00:00"
+        },
+        {
+            "name": "paypal/rest-api-sdk-php",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paypal/PayPal-PHP-SDK.git",
+                "reference": "72e2f2466975bf128a31e02b15110180f059fc04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paypal/PayPal-PHP-SDK/zipball/72e2f2466975bf128a31e02b15110180f059fc04",
+                "reference": "72e2f2466975bf128a31e02b15110180f059fc04",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3.0",
+                "psr/log": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PayPal": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "PayPal",
+                    "homepage": "https://github.com/paypal/rest-api-sdk-php/contributors"
+                }
+            ],
+            "description": "PayPal's PHP SDK for REST APIs",
+            "homepage": "http://paypal.github.io/PayPal-PHP-SDK/",
+            "keywords": [
+                "payments",
+                "paypal",
+                "rest",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/paypal/PayPal-PHP-SDK/issues",
+                "source": "https://github.com/paypal/PayPal-PHP-SDK/tree/master"
+            },
+            "abandoned": true,
+            "time": "2019-01-04T20:04:25+00:00"
         },
         {
             "name": "psr/container",
