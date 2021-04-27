@@ -10,7 +10,7 @@ require ROOT . '/templates/Customers/header.php';
 <div class="row">
     <div class="column-responsive column-80">
         <div class="products form content">
-            <?= $this->Form->create($product) ?>
+            <?= $this->Form->create($product,['type'=>'file']) ?>
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
                 <?php
@@ -21,6 +21,7 @@ require ROOT . '/templates/Customers/header.php';
                     echo $this->Form->control('weight');
                     echo $this->Form->control('category');
                     echo $this->Form->control('quantity');
+                    echo $this->Form->control('image_file',['type'=>'file']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
