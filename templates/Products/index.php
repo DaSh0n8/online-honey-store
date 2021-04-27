@@ -21,6 +21,7 @@ require ROOT . '/templates/Customers/header.php';
                     <th><?= $this->Paginator->sort('weight') ?></th>
                     <th><?= $this->Paginator->sort('category') ?></th>
                     <th><?= $this->Paginator->sort('quantity') ?></th>
+                    <th><?= $this->Paginator->sort('image') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -34,6 +35,7 @@ require ROOT . '/templates/Customers/header.php';
                     <td><?= $this->Number->format($product->weight) ?></td>
                     <td><?= h($product->category) ?></td>
                     <td><?= $this->Number->format($product->quantity) ?></td>
+                    <td><?= $this->Html->image($product->image) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>

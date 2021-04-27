@@ -98,6 +98,18 @@ class ProductsTable extends Table
             ->integer('quantity')
             ->allowEmptyString('quantity');
 
+        $validator
+            ->allowEmptyFile('image')
+            ->add('image',[
+                'mimeType' =>[
+                    'rule' => ['mimType',['image/jpg','image/png','image/jpeg']],
+                ],
+                'fileSize' => [
+                    'rule' => ['fileSize','<=','1MB'],
+                    'message' => 'Image file size must be less than 1MB.',
+                ]
+            ]);
+
         return $validator;
     }
 }

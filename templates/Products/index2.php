@@ -117,6 +117,7 @@ require("../templates/Pages/header.php");
                                     <div class="why-text">
                                         <td><?= h($product->name) ?></td>
                                         <td><?= $this->Number->format($product->price) ?></td>
+                                        <td><?= $this->Html->image($product->image) ?></td>
                                     </div>
                                 </div>
                             </div>
