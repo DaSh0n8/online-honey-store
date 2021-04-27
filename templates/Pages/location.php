@@ -91,8 +91,7 @@ require("header.php");
 
 <body>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50395.912207756875!2d144.94132137498866!3d-37.86626801262845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6686ff6d9d34f%3A0xf34a2fcff682f9f0!2sSt%20Kilda%20Esplanade%20Market!5e0!3m2!1szh-CN!2shk!4v1619516599406!5m2!1szh-CN!2shk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    <div class = "col-lg-2">
-        St Kilda Esplanade Market P.O.Box 382, Caulfield East, VIC 3145.
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.773572815951!2d144.9720865157092!3d-37.86558814478432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6686ff6d9d34f%3A0xf34a2fcff682f9f0!2sSt%20Kilda%20Esplanade%20Market!5e0!3m2!1sen!2shk!4v1619519377486!5m2!1sen!2shk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        St Kilda Esplanade Market P.O.Box 382, Caulfield East, VIC 3145.
     </div>
 
 
