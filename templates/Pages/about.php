@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
 <?php
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
@@ -20,7 +23,9 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
+
 $this->disableAutoLayout();
+
 
 if (!Configure::read('debug')) :
     throw new NotFoundException(
@@ -37,25 +42,23 @@ require("header.php");
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-<head>
+<!-- Bootstrap CSS -->
+<?= $this->Html->css('bootstrap.min') ?>
+
+<!-- Site CSS -->
+<?= $this->Html->css('style') ?>
+
+<!-- Responsive CSS -->
+<?= $this->Html->css('responsive') ?>
+
+<!-- Custom CSS -->
+<?= $this->Html->css('custom') ?>
+
+<?= $this->fetch('meta') ?>
+<?= $this->fetch('css') ?>
+<?= $this->fetch('script') ?>
+
     <?= $this->Html->charset() ?>
-    <!-- Bootstrap CSS -->
-    <?= $this->Html->css('bootstrap.min') ?>
-
-    <!-- Site CSS -->
-    <?= $this->Html->css('style') ?>
-
-    <!-- Responsive CSS -->
-    <?= $this->Html->css('responsive') ?>
-
-    <!-- Custom CSS -->
-    <?= $this->Html->css('custom') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Mobile Metas -->
@@ -93,7 +96,6 @@ require("header.php");
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
 
 <!-- Start Top Search -->
 <div class="top-search">
@@ -128,15 +130,14 @@ require("header.php");
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img class="img-fluid" src="images/honey.png" alt="" height="300"/>
-
-                    <img src="../webroot/images/honey.png" alt="" height="300">
+                <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
+                </div>
             </div>
             <div class="col-lg-6">
-
                 <h2 class="noo-sh-title-top">Welcome to <span>Paul's Healthy Honey</span></h2>
                 <p>
                     Our honey is 100% Australian, organic and chemical residue free, is of the highest standard and quality harvested just for you.</p>>
+                <a class="btn hvr-hover" href="#">Read More</a>
             </div>
         </div>
         <div class="row my-5">
@@ -159,10 +160,123 @@ require("header.php");
             </div>
 
         </div>
-
+        <div class="row my-4">
+            <div class="col-12">
+                <h2 class="noo-sh-title">What Customers Think...
+                </h2>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"> <img src="images/img-1.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3> <span class="post">
+Margaret Berwick, Melbourne</span> </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-youtube"></a>
+                            </li>
+                        </ul>
+                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                    </div>
+                    <div class="team-description">
+                        <p>"I'm a cancer survivor and I take Paul's 260+ everyday and my immune system has improved dramatically and it also tastes great</p>
+                    </div>
+                    <hr class="my-0"> </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"> <img src="images/img-2.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="title">Kristiana</h3> <span class="post">Jason
+Hong Kong</span> </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-youtube"></a>
+                            </li>
+                        </ul>
+                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                    </div>
+                    <div class="team-description">
+                        <p>"I gave the 260+ to my 7 year old son who had been diagnosed with coronavirus and within two days his sore throat and temperature subsided and he was tested negative after 4 days."</p>                    </div>
+                    <hr class="my-0"> </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"> <img src="images/img-3.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="title">Steve Thomas</h3> <span class="post">
+Sur
+Rosebud, Victoria</span> </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-youtube"></a>
+                            </li>
+                        </ul>
+                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                    </div>
+                    <div class="team-description">
+<p>"Paul's honeys are my favourite and we love the cinnamon with our chai."
+</p>                    </div>
+                    <hr class="my-0"> </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="hover-team">
+                    <div class="our-team"> <img src="images/img-1.jpg" alt="" />
+                        <div class="team-content">
+                            <h3 class="title">Williamson</h3> <span class="post">Ming
+Box Hill, Melbourne</span> </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fab fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-youtube"></a>
+                            </li>
+                        </ul>
+                        <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                    </div>
+                    <div class="team-description">
+<p>
+    "I love the 40+ honey and take it everyday and give it to my family and it tastes great and the price is excellent."</p>
+                    </div>
+                    <hr class="my-0"> </div>
+            </div>
         </div>
     </div>
-
+</div>
 <!-- End About Page -->
 
 <!-- Start Instagram Feed  -->

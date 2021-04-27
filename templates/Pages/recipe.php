@@ -113,7 +113,10 @@ require("header.php");
                 </div>
             </div>
             <div class="col-lg-6">
+
                 <h2 class="noo-sh-title-top">Cinnamon <span>Bliss Balls</span></h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g7kcTPvphXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                 <p>Ingredients:<br>
                     - 1 cup almond meal <br>
                     - 1 teaspoon tahini<br>
@@ -124,6 +127,8 @@ require("header.php");
             </div>
             <div class="col-lg-5">
                 <h2 class="noo-sh-title-top">PAUL'S HEALTHY <span>CINNAMON CHAI PORRIDGE </span></h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dtzxdSrQyQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                 <p>Ingredients:<br>
                     - 1/2 cup water <br>
                     - 1/2 cup rolled oats<br>
@@ -143,6 +148,8 @@ require("header.php");
             </div>
             <div class="col-lg-10">
                 <h2 class="noo-sh-title-top">PAUL'S GINGER <span>HONEY SOY SALMON RECIPE</span></h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aM6b5ohZT3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                 <p>Ingredients:<br>
                     - 1 large fillet of salmon (around 130g)<br>
                     Marinade:<br>
@@ -154,6 +161,8 @@ require("header.php");
             </div>
             <div class="col-lg-10">
                 <h2 class="noo-sh-title-top">PAUL'S HEALTHY CINNAMON  <span>HONEY CARROT CAKE RECIPE</span></h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FXXsgjuJ6wM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                 <p>Ingredients:<br>
                     - 2 eggs (whites and yolks separated)<br>
                     - ¾ cup of rolled oats (can substitute for a flour)<br>
