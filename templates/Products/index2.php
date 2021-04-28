@@ -99,12 +99,12 @@ require("../templates/Pages/header.php");
 
                     <?php foreach ($products as $product): ?>
                         <tr>
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="row">
                                 <div class="products-single fix">
                                     <div class="box-img-hover">
                                         <div class="type-lb">
                                         </div>
-                                        <img src="images/img-pro-02.jpg"  class="img-fluid" alt="Image">
+                                        <?= $this->Html->image($product->image) ?>
                                         <div class="mask-icon">
                                             <ul>
                                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -115,9 +115,9 @@ require("../templates/Pages/header.php");
                                         </div>
                                     </div>
                                     <div class="why-text">
-                                        <td><?= h($product->name) ?></td>
-                                        <td><?= $this->Number->format($product->price) ?></td>
-                                        <td><?= $this->Html->image($product->image) ?></td>
+                                        <td>Name : <?= h($product->name) ?></td>
+                                        <td>Price : $<?= $this->Number->format($product->price) ?></td>
+
                                     </div>
                                 </div>
                             </div>
