@@ -3,7 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Customer $customer
  */
-require('header.php')
+
 ?>
 <div class="row">
     <aside class="column">

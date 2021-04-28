@@ -1,27 +1,29 @@
 <?php
-define(ROOT,'./');
-
-require ROOT . '/templates/Customers/header.php';
 
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
  */
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="products index content">
+<div class="container-fluid">
     <h3><?= __('Products') ?></h3>
+    <div class="card shadow mb-4">
+    <div class="card-body">
     <div class="table-responsive">
-        <table>
+        <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('price') ?></th>
-                    <th><?= $this->Paginator->sort('sku') ?></th>
-                    <th><?= $this->Paginator->sort('weight') ?></th>
-                    <th><?= $this->Paginator->sort('category') ?></th>
-                    <th><?= $this->Paginator->sort('quantity') ?></th>
-                    <th><?= $this->Paginator->sort('image') ?></th>
+                    <th><?= h('Product ID') ?></th>
+                    <th><?= h('Name') ?></th>
+                    <th><?= h('Price') ?></th>
+                    <th><?= h('SKU') ?></th>
+                    <th><?= h('Weight (g)') ?></th>
+                    <th><?= h('Category') ?></th>
+                    <th><?= h('Quantity') ?></th>
+                    <th><?= h('Image') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -35,7 +37,7 @@ require ROOT . '/templates/Customers/header.php';
                     <td><?= $this->Number->format($product->weight) ?></td>
                     <td><?= h($product->category) ?></td>
                     <td><?= $this->Number->format($product->quantity) ?></td>
-                    <td><?= $this->Html->image($product->image) ?></td>
+                    <td><?= $this->Html->image($product->image)?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
@@ -46,14 +48,8 @@ require ROOT . '/templates/Customers/header.php';
             </tbody>
         </table>
     </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
+    </div>
+    <?= $this->Html->script('/js/demo/datatables-demo.js')?>
+
 </div>

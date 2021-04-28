@@ -1,15 +1,18 @@
 <?php
-define(ROOT,'./');
 
-require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
  */
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="row">
-    <div class="column-responsive column-80">
-        <div class="products form content">
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
             <?= $this->Form->create($product,['type'=>'file']) ?>
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
@@ -29,3 +32,4 @@ require ROOT . '/templates/Customers/header.php';
         </div>
     </div>
 </div>
+</div>>

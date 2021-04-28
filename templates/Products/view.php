@@ -1,60 +1,58 @@
 <?php
-define(ROOT,'./');
 
-require ROOT . '/templates/Customers/header.php';
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
  */
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Product'), ['action' => 'edit', $product->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Product'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="products view content">
-            <h3><?= h($product->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Name') ?></th>
-                    <td><?= h($product->name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Category') ?></th>
-                    <td><?= h($product->category) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($product->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Price') ?></th>
-                    <td><?= $this->Number->format($product->price) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Sku') ?></th>
-                    <td><?= $this->Number->format($product->sku) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Weight') ?></th>
-                    <td><?= $this->Number->format($product->weight) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Quantity') ?></th>
-                    <td><?= $this->Number->format($product->quantity) ?></td>
-                </tr>
-            </table>
-            <div class="text">
-                <strong><?= __('Description') ?></strong>
-                <blockquote>
-                    <?= $this->Text->autoParagraph(h($product->description)); ?>
-                </blockquote>
+
+
+<div class="container-fluid">
+    <h3><?= h($product->name) ?></h3>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
+                    <tr>
+                        <tr>
+                            <th><?= __('Id') ?></th>
+                            <td><?= $this->Number->format($product->id) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Name') ?></th>
+                            <td><?= h($product->name) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Sku') ?></th>
+                            <td><?= $this->Number->format($product->sku) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Category') ?></th>
+                            <td><?= h($product->category) ?></td>
+                        </tr>
+
+                        <tr>
+                            <th><?= __('Price') ?></th>
+                            <td><?= $this->Number->format($product->price) ?></td>
+                        </tr>
+
+                        <tr>
+                        <th><?= __('Weight') ?></th>
+                        <td><?= $this->Number->format($product->weight) ?></td>
+                        </tr>
+                        <tr>
+                        <th><?= __('Quantity') ?></th>
+                        <td><?= $this->Number->format($product->quantity) ?></td>
+                        </tr>
+                        <tr>
+                        <th><?= __('Description')?></th>
+                        <td><?= h($product->description) ?></td>
+                        </tr>
+                    </thead>
+                </table>
             </div>
             <div class="related">
                 <h4><?= __('Related Order Lines') ?></h4>
@@ -86,5 +84,5 @@ require ROOT . '/templates/Customers/header.php';
                 <?php endif; ?>
             </div>
         </div>
-    </div>
-</div>
+    </div></div></div></div>
+

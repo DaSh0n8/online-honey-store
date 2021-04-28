@@ -16,7 +16,10 @@
 $cakeDescription = "Paul's Honey Administration";
 
 $this->Html->css('sb-admin-2.min', ['block' => true]);
-$this->Html->script('js/sb-admin-2.min.js', ['block'=>true]);
+$this->Html->css('sb-admin-2', ['block' => true]);
+$this->Html->script('sb-admin-2.min.js', ['block'=>true]);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +33,11 @@ $this->Html->script('js/sb-admin-2.min.js', ['block'=>true]);
     <title><?= $this->fetch('title') ?></title>
     <?= $this->Html->css('/vendor/fontawesome-free/css/all.min.css')?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-
+    <?= $this->Html->script('/vendor/jquery/jquery.min.js')?>
     <?= $this->Html->css('sb-admin-2.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-
 
 </head>
 <body id="page-top">
@@ -68,31 +70,67 @@ $this->Html->script('js/sb-admin-2.min.js', ['block'=>true]);
                 </a>
                 <div id="collapseProducts" class="collapse" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Product Options</h6>
+                        <h6 class="collapse-header">Manage Products</h6>
                         <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Products','action' => 'index']) ?>">View All Products</a>
                         <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Products','action' => 'add']) ?>">Add New Product</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Orders Collapse Menu -->
+            <!-- Nav Item - Customers Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
-                   aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Customers','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseCustomers"
+                   aria-expanded="true" aria-controls="collapseCustomers">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Customers</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <div id="collapseCustomers" class="collapse" aria-labelledby="headingCustomers"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Manage Customers</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Customers','action' => 'index']) ?>">View All Customers</a>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Customers','action' => 'add']) ?>">Add New Customer</a>
+
                     </div>
                 </div>
             </li>
 
+
+            <!-- Nav Item - Orders Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Orders','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseOrders"
+                   aria-expanded="true" aria-controls="collapseOrders">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Orders</span>
+                </a>
+                <div id="collapseOrders" class="collapse" aria-labelledby="headingOrders"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Orders</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Orders','action' => 'index']) ?>">View All Completed Orders</a>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Orders','action' => 'add']) ?>">Add New Order</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Users Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Users','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseUsers"
+                   aria-expanded="true" aria-controls="collapseUsers">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Users</span>
+                </a>
+                <div id="collapseUsers" class="collapse" aria-labelledby="headingUsers"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Users</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Users','action' => 'index']) ?>">View All Users</a>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Users','action' => 'add']) ?>">Add New User</a>
+
+                    </div>
+                </div>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -105,21 +143,75 @@ $this->Html->script('js/sb-admin-2.min.js', ['block'=>true]);
         </ul>
         <!-- End of Sidebar -->
         <main class="main">
-            <div class="container">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                               aria-label="Search" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+                    <!-- Nav Item - Alerts -->
+
+                    <!-- Nav Item - Messages -->
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <img class="img-profile rounded-circle"
+                                 src="img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
                 <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>
-            </div>
+
+
         </main>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="/webroot/vendor/jquery/jquery.min.js"></script>
-    <script src="/webroot/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <?= $this->Html->script('/vendor/bootstrap/js/bootstrap.bundle.min.js')?>
     <!-- Core plugin JavaScript-->
-    <script src="/webroot/vendor/jquery-easing/jquery.easing.min.js"></script>
-
+    <?= $this->Html->script('/vendor/jquery-easing/jquery.easing.min.js')?>
     <!-- Custom scripts for all pages-->
-    <script src="/webroot/js/sb-admin-2.min.js"></script>
+    <?= $this->Html->script('/js/sb-admin-2.min.js')?>
 
     <?= $this->fetch('script') ?>
 </body>

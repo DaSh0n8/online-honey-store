@@ -3,25 +3,30 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Customer[]|\Cake\Collection\CollectionInterface $customers
  */
-require('header.php')
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="customers index content">
+<div class="container-fluid">
     <?= $this->Html->link(__('New Customer'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Customers') ?></h3>
-    <div class="table-responsive">
-        <table>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('first_name') ?></th>
-                    <th><?= $this->Paginator->sort('last_name') ?></th>
-                    <th><?= $this->Paginator->sort('phone_number') ?></th>
-                    <th><?= $this->Paginator->sort('email_address') ?></th>
-                    <th><?= $this->Paginator->sort('street_address') ?></th>
-                    <th><?= $this->Paginator->sort('suburb') ?></th>
-                    <th><?= $this->Paginator->sort('post_code') ?></th>
-                    <th><?= $this->Paginator->sort('state') ?></th>
-                    <th><?= $this->Paginator->sort('marketing_emails') ?></th>
+                    <th><?= h('Customer ID') ?></th>
+                    <th><?= h('First Name') ?></th>
+                    <th><?= h('Last Name') ?></th>
+                    <th><?= h('Phone Number') ?></th>
+                    <th><?= h('Email Address') ?></th>
+                    <th><?= h('Street Address') ?></th>
+                    <th><?= h('Suburb') ?></th>
+                    <th><?= h('Post Code') ?></th>
+                    <th><?= h('State') ?></th>
+                    <th><?= h('Marketing Emails') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -48,14 +53,7 @@ require('header.php')
             </tbody>
         </table>
     </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        </div>
     </div>
+    <?= $this->Html->script('/js/demo/datatables-demo.js')?>
 </div>
