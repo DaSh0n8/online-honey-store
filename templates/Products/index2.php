@@ -83,7 +83,7 @@ require("../templates/Pages/header.php");
                                     <option value="4">Best Selling</option>
                                 </select>
                             </div>
-                            <p>Showing all 4 results</p>
+                            <p>Showing all results</p>
                         </div>
                         <div class="col-12 col-sm-4 text-center text-sm-right">
                             <ul class="nav nav-tabs ml-auto">

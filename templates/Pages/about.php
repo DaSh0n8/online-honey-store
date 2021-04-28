@@ -136,8 +136,7 @@ require("header.php");
             <div class="col-lg-6">
                 <h2 class="noo-sh-title-top">Welcome to <span>Paul's Healthy Honey</span></h2>
                 <p>
-                    Our honey is 100% Australian, organic and chemical residue free, is of the highest standard and quality harvested just for you.</p>>
-                <a class="btn hvr-hover" href="#">Read More</a>
+                    Our honey is 100% Australian, organic and chemical residue free, is of the highest standard and quality harvested just for you.</p>
             </div>
         </div>
         <div class="row my-5">
