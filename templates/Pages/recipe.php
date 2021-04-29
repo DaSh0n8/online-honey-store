@@ -112,7 +112,7 @@ require("header.php");
                 <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
 
                 <h2 class="noo-sh-title-top">Cinnamon <span>Bliss Balls</span></h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/g7kcTPvphXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

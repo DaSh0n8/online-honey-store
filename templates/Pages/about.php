@@ -36,6 +36,7 @@ $this->Html->css('custom', ['block' => true]);
 $this->Html->css('bootstrap.min', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
+$this->Html->css('form', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 require("header.php");
 ?>
@@ -53,6 +54,8 @@ require("header.php");
 
 <!-- Custom CSS -->
 <?= $this->Html->css('custom') ?>
+
+<?= $this->Html->css('form') ?>
 
 <?= $this->fetch('meta') ?>
 <?= $this->fetch('css') ?>
@@ -278,94 +281,29 @@ Box Hill, Melbourne</span> </div>
 </div>
 <!-- End About Page -->
 
-<!-- Start Instagram Feed  -->
-<div class="instagram-box">
-    <div class="main-instagram owl-carousel owl-theme">
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-01.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-02.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-03.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-04.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-05.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-06.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-07.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-08.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-09.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/instagram-img-05.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Start Inquiry Feed  -->
+<div class="container1">
+    <h1 align="center">Have a question?</h1>
+    <p align="center">Please fill in this form to ask us.</p>
+    <form action="insertinquiry.php" method="post">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="eaddress">Email Address</label>
+        <input type="text" id="eaddress" name="emailaddress" placeholder="Your email adress..">
+
+        <label for="phnum">Phone number</label>
+        <input type="text" id="phnum " name="phonenumber" placeholder="Your phone number..">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Your inquiry.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
 </div>
-<!-- End Instagram Feed  -->
-
-
 <!-- Start Footer  -->
 <footer>
     <div class="footer-main">

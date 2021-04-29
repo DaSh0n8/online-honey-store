@@ -150,10 +150,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <?= $this->Html->link(__('About Us'), ['action' => '../Pages/about']) ?>
                     </li>
                     <li class = 'nav-item'>
-                        <?= $this->Html->link(__('Products'), ['action' => '../Pages/products']) ?>
-                    </li>
-                    <li class='nav-item'>
-                        <?= $this->Html->link(__('Products2'), ['action' => '../Products/index2']) ?>
+                        <?= $this->Html->link(__('Products'), ['action' => '../Products/index3']) ?>
                     </li>
                 </ul>
             </div>
