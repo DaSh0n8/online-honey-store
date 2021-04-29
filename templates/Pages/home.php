@@ -152,18 +152,14 @@ $this->Html->css('min', ['block' => true]);
             <!-- /.navbar-collapse -->
 
             <!-- Start Atribute Navigation -->
-<!--            <div class="attr-nav">-->
-<!--                <ul>-->
-<!--                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>-->
-<!--                    <li class="side-menu">-->
-<!--                        <a href="#">-->
-<!--                            <i class="fa fa-shopping-bag"></i>-->
-<!--                            <span class="badge">3</span>-->
-<!--                            <p>My Cart</p>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
+            <div class="attr-nav">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="side-menu">                    <li class='nav-item'>
+                        <?= $this->Html->link(__('Shopping Cart'), ['action' => '../OrderLines/cart']) ?>
+                    </li>
+                    </li>
+                </ul>
+            </div>
             <!-- End Atribute Navigation -->
         </div>
         <!-- Start Side Menu -->
