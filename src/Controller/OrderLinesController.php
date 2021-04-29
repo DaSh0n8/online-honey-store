@@ -25,6 +25,20 @@ class OrderLinesController extends AppController
 
         $this->set(compact('orderLines'));
     }
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function cart()
+    {
+        $this->paginate = [
+            'contain' => ['Orders', 'Products'],
+        ];
+        $orderLines = $this->OrderLines->find();
+
+        $this->set(compact('orderLines'));
+    }
 
     /**
      * View method

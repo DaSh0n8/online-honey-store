@@ -31,7 +31,6 @@ $this->Html->css('custom', ['block' => true]);
 $this->Html->css('bootstrap.min', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +52,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <!-- Site Icons -->
     <?= $this->Html->meta('icon') ?>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
 
 
     <!-- Bootstrap CSS -->
@@ -87,25 +86,21 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="custom-select-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-                        <option>¥ AUD</option>
-                        <option>$ USD</option>
+                        <option>$ AUD</option>
                     </select>
                 </div>
                 <div class="right-phone-box">
-                    <p>Call US :- <a href="#"> 0412 804 035</a></p>
+                    <p>Call Us :- <a href="#"> 0412 804 035</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                        <li><a href="#"><i class="fa fa-user s_color"></i><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?></a></li>
+                        <li><a href="#"><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-                        <option>Register Here</option>
-                        <option>Sign In</option>
                     </select>
                 </div>
                 <div class="text-slid-box">
@@ -381,5 +376,5 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <script src="js/contact-form-script.js"></script>
 <script src="js/custom.js"></script>
 </body>
-
+<?= $this->fetch('script') ?>
 </html>

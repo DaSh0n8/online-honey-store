@@ -26,7 +26,7 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
                             <td><?= h($product->name) ?></td>
                         </tr>
                         <tr>
-                            <th><?= __('Sku') ?></th>
+                            <th><?= __('SKU') ?></th>
                             <td><?= $this->Number->format($product->sku) ?></td>
                         </tr>
                         <tr>

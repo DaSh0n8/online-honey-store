@@ -48,9 +48,6 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= $this->Url->build('/') ?>">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
                 <div class="sidebar-brand-text mx-3">Paul's Honey Admin</div>
             </a>
 
@@ -81,7 +78,6 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
             <li class="nav-item">
                 <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Customers','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseCustomers"
                    aria-expanded="true" aria-controls="collapseCustomers">
-                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Customers</span>
                 </a>
                 <div id="collapseCustomers" class="collapse" aria-labelledby="headingCustomers"
@@ -100,7 +96,6 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
             <li class="nav-item">
                 <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Orders','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseOrders"
                    aria-expanded="true" aria-controls="collapseOrders">
-                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Orders</span>
                 </a>
                 <div id="collapseOrders" class="collapse" aria-labelledby="headingOrders"
@@ -118,7 +113,6 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
             <li class="nav-item">
                 <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Users','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseUsers"
                    aria-expanded="true" aria-controls="collapseUsers">
-                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Users</span>
                 </a>
                 <div id="collapseUsers" class="collapse" aria-labelledby="headingUsers"
@@ -127,6 +121,22 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                         <h6 class="collapse-header">Manage Users</h6>
                         <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Users','action' => 'index']) ?>">View All Users</a>
                         <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Users','action' => 'add']) ?>">Add New User</a>
+
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Orders Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'OrderLines','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseOrderLines"
+                   aria-expanded="true" aria-controls="collapseOrderLines">
+                    <span>OrderLines</span>
+                </a>
+                <div id="collapseOrderLines" class="collapse" aria-labelledby="headingUsers"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Order Lines</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'OrderLines','action' => 'index']) ?>">View All Shopping Carts</a>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'OrderLines','action' => 'add']) ?>">Add Item Shopping Cart</a>
 
                     </div>
                 </div>

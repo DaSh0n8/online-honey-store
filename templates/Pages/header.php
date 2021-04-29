@@ -33,7 +33,6 @@ $this->Html->css('custom', ['block' => true]);
 $this->Html->css('bootstrap.min', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
 $this->Html->css('min', ['block' => true]);
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +54,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <!-- Site Icons -->
     <?= $this->Html->meta('icon') ?>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
 
 
     <!-- Bootstrap CSS -->
@@ -90,17 +89,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <div class="custom-select-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
                         <option>$ AUD</option>
-                        <option>$ USD</option>
                     </select>
                 </div>
                 <div class="right-phone-box">
-                    <p>Call US :- <a href="#"> 0412 804 035</a></p>
+                    <p>Call Us :- <a href="#"> 0412 804 035</a></p>
                 </div>
                 <div class="our-link">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                        <li><a href="#"><i
-                                    class="fa fa-user s_color"></i><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
+                        <li><a href="#"><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
                             </a></li>
                     </ul>
                 </div>
@@ -117,9 +113,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         <ul class="offer-box">
                             <li>
                                 <i class="fab fa-opencart"></i> 10% off your first purchase for new customers!
-                            </li>
-                            <li>
-                                <i class="fab fa-opencart"></i> Get some healing honey as a special Mother's Day gift!
                             </li>
                         </ul>
                     </div>
@@ -141,7 +134,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                         aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="../webroot/images/logo.png"
+                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="images/logo.png"
                                                                                   class="logo" alt="" height="100"></a>
             </div>
             <!-- End Header Navigation -->
@@ -163,18 +156,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <!-- /.navbar-collapse -->
 
             <!-- Start Atribute Navigation -->
-            <!--            <div class="attr-nav">-->
-            <!--                <ul>-->
-            <!--                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>-->
-            <!--                    <li class="side-menu">-->
-            <!--                        <a href="#">-->
-            <!--                            <i class="fa fa-shopping-bag"></i>-->
-            <!--                            <span class="badge">3</span>-->
-            <!--                            <p>My Cart</p>-->
-            <!--                        </a>-->
-            <!--                    </li>-->
-            <!--                </ul>-->
-            <!--            </div>-->
+            <div class="attr-nav">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="side-menu">                    <li class='nav-item'>
+                        <?= $this->Html->link(__('Shopping Cart'), ['action' => '../OrderLines/cart']) ?>
+                    </li>
+                    </li>
+                </ul>
+            </div>
             <!-- End Atribute Navigation -->
         </div>
         <!-- Start Side Menu -->
@@ -209,4 +198,23 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <!-- End Navigation -->
 </header>
 <!-- End Main Top -->
+
+<!-- ALL JS FILES -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/jquery.superslides.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/inewsticker.js"></script>
+<script src="js/bootsnav.js."></script>
+<script src="js/images-loded.min.js"></script>
+<script src="js/isotope.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/baguetteBox.min.js"></script>
+<script src="js/form-validator.min.js"></script>
+<script src="js/contact-form-script.js"></script>
+<script src="js/custom.js"></script>
+</body>
+<?= $this->fetch('script') ?>
 

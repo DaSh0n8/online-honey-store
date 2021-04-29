@@ -25,7 +25,7 @@ class ProductsController extends AppController
 
     public function index2()
     {
-        $products = $this->paginate($this->Products);
+        $products = $this->Products->find();
 
         $this->set(compact('products'));
     }
@@ -34,6 +34,22 @@ class ProductsController extends AppController
         $products = $this->paginate($this->Products);
 
         $this->set(compact('products'));
+    }
+
+    /**
+     * View method
+     *
+     * @param string|null $id Product id.
+     * @return \Cake\Http\Response|null|void Renders view
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function viewproduct($id = null)
+    {
+        $product = $this->Products->get($id, [
+            'contain' => ['OrderLines'],
+        ]);
+
+        $this->set(compact('product'));
     }
 
     /**

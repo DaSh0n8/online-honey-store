@@ -11,8 +11,7 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
+
             <?= $this->Form->create($product,['type'=>'file']) ?>
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
@@ -31,5 +30,3 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
             <?= $this->Form->end() ?>
         </div>
     </div>
-</div>
-</div>>
