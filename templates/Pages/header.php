@@ -134,7 +134,7 @@ $this->Html->css('min', ['block' => true]);
                         aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="images/logo.png"
+                <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="../webroot/images/logo.png"
                                                                                   class="logo" alt="" height="100"></a>
             </div>
             <!-- End Header Navigation -->
