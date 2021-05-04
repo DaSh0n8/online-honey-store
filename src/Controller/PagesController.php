@@ -84,7 +84,7 @@ class PagesController extends AppController
 
         // actions public, skipping the authentication check
 
-        $this->Authentication->addUnauthenticatedActions(['home', 'about']);
+        $this->Authentication->addUnauthenticatedActions(['display']);
 
     }
 
