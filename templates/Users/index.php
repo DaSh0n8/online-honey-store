@@ -6,7 +6,12 @@
  */
 ?>
 <div class="users index content">
-<?=$this->Identity->get('email');?>
+<?=
+$this->Identity->get('email');
+if($this->Identity->get('role')=='admin'){
+    echo "";
+}
+?>
 
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">

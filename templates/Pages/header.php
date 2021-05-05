@@ -164,6 +164,14 @@ $this->Html->css('min', ['block' => true]);
                     </li>
                 </ul>
             </div>
+            <div class="attr-nav">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="side-menu">                    <li class='nav-item'>
+                        <?= $this->Html->link(__('LogIn'), ['action' => '../Users/login']) ?>
+                    </li>
+                    </li>
+                </ul>
+            </div>
             <!-- End Atribute Navigation -->
         </div>
         <!-- Start Side Menu -->
