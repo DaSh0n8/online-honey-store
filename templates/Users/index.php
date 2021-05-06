@@ -6,12 +6,6 @@
  */
 ?>
 <div class="users index content">
-<?=
-$this->Identity->get('email');
-if($this->Identity->get('role')=='admin'){
-    echo "";
-}
-?>
 
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">
@@ -34,6 +28,13 @@ if($this->Identity->get('role')=='admin'){
                     <td><?= h($user->role) ?></td>
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
+                        <?=
+                        h($user->role);
+                        if ($user->role=='admin'){
+                            echo ' admin';
+                        }else{
+                            echo'customer';
+                        }?>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>

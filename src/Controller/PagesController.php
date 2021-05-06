@@ -70,9 +70,9 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
-    public function home(){
+ //   public function home(){
 
-    }
+   // }
 
     public function beforeFilter(\Cake\Event\EventInterface $event)
 
