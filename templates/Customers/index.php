@@ -42,7 +42,7 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
                     <td><?= h($customer->suburb) ?></td>
                     <td><?= h($customer->post_code) ?></td>
                     <td><?= h($customer->state) ?></td>
-                    <td><?= h($customer->marketing_emails) ?></td>
+                    <td><?= $customer->marketing_emails ? __('Yes') : __('No'); ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $customer->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $customer->id]) ?>

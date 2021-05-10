@@ -1,13 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Insert Page page</title>
-</head>
-
-<body>
-
 <?php
 
 // servername => localhost
@@ -31,7 +21,7 @@ $subject = $_REQUEST['subject'];
 
 // Performing insert query execution
 // here our table name is college
-$sql = "INSERT INTO inquiries VALUES (DEFAULT ,'$first_name',
+$sql = "INSERT INTO inquiries VALUES (default ,'$first_name',
             '$last_name','$phone_number','$email_address','$subject')";
 
 if(mysqli_query($conn, $sql)){

@@ -3,32 +3,27 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Inquiry $inquiry
  */
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Inquiry'), ['action' => 'edit', $inquiry->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Inquiry'), ['action' => 'delete', $inquiry->id], ['confirm' => __('Are you sure you want to delete # {0}?', $inquiry->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Inquiries'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Inquiry'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="inquiries view content">
-            <h3><?= h($inquiry->id) ?></h3>
-            <table>
+    <div class="container-fluid">
+            <h3>Inquiry ID : <?= h($inquiry->id) ?></h3>
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
                 <tr>
-                    <th><?= __('Firstname') ?></th>
-                    <td><?= h($inquiry->firstname) ?></td>
+                    <th><?= __('First Name') ?></th>
+                    <td><?= h($inquiry->first_name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Lastname') ?></th>
-                    <td><?= h($inquiry->lastname) ?></td>
+                    <th><?= __('Last Name') ?></th>
+                    <td><?= h($inquiry->last_name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Phonenumber') ?></th>
-                    <td><?= h($inquiry->phonenumber) ?></td>
+                    <th><?= __('Phone Number') ?></th>
+                    <td><?= h($inquiry->phone_number) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Email') ?></th>
@@ -38,11 +33,14 @@
                     <th><?= __('Message') ?></th>
                     <td><?= h($inquiry->message) ?></td>
                 </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($inquiry->id) ?></td>
-                </tr>
+
+                        <tr>
+                            <th><?= __('Reply status') ?></th>
+                            <td><?= $inquiry->reply_status ? __('Replied') : __('Unreplied'); ?></td>
+                        </tr>
+
             </table>
         </div>
     </div>
 </div>
+    </div>

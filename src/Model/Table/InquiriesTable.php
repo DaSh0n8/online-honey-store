@@ -55,22 +55,22 @@ class InquiriesTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('firstname')
-            ->maxLength('firstname', 100)
-            ->requirePresence('firstname', 'create')
-            ->notEmptyString('firstname');
+            ->scalar('first_name')
+            ->maxLength('first_name', 100)
+            ->requirePresence('first_name', 'create')
+            ->notEmptyString('first_name');
 
         $validator
-            ->scalar('lastname')
-            ->maxLength('lastname', 100)
-            ->requirePresence('lastname', 'create')
-            ->notEmptyString('lastname');
+            ->scalar('last_name')
+            ->maxLength('last_name', 100)
+            ->requirePresence('last_name', 'create')
+            ->notEmptyString('last_name');
 
         $validator
-            ->scalar('phonenumber')
-            ->maxLength('phonenumber', 10)
-            ->requirePresence('phonenumber', 'create')
-            ->notEmptyString('phonenumber');
+            ->scalar('phone_number')
+            ->maxLength('phone_number', 10)
+            ->requirePresence('phone_number', 'create')
+            ->notEmptyString('phone_number');
 
         $validator
             ->email('email')

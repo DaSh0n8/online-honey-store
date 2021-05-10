@@ -20,11 +20,11 @@ require("../templates/Pages/header.php");
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Our Products</h2>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
-                </ul>
+                <h2>Product details</h2>
+<!--                <ul class="breadcrumb">-->
+<!--                    <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                    <li class="breadcrumb-item active">Shop</li>-->
+<!--                </ul>-->
             </div>
         </div>
     </div>
@@ -43,8 +43,8 @@ require("../templates/Pages/header.php");
             <div class="col-xl-7 col-lg-7 col-md-6">
                 <div class="single-product-details">
                     <h2><?= h($product->name) ?></h2>
-                    <h5><?= $this->Number->format($product->price) ?></h5>
-                    <p class="available-stock"><span><?= $this->Number->format($product->quantity) ?></span><p>
+                    <h5>$<?= $this->Number->format($product->price) ?></h5>
+                    <p class="available-stock"><span><b>Qty:</b><?= $this->Number->format($product->quantity) ?></span><p>
                     <h4>Description:</h4>
                     <p><?= h($product->description) ?></p>
                     <ul>

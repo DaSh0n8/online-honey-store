@@ -3,22 +3,17 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Customer $customer
  */
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Customer'), ['action' => 'edit', $customer->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Customer'), ['action' => 'delete', $customer->id], ['confirm' => __('Are you sure you want to delete # {0}?', $customer->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Customers'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Customer'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="customers view content">
-            <h3><?= h($customer->id) ?></h3>
-            <table>
+<div class="container-fluid">
+            <h3><?= h($customer->first_name) ?> <?= h($customer->last_name) ?> </h3>
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
                 <tr>
                     <th><?= __('First Name') ?></th>
                     <td><?= h($customer->first_name) ?></td>
@@ -60,6 +55,7 @@
                     <td><?= $customer->marketing_emails ? __('Yes') : __('No'); ?></td>
                 </tr>
             </table>
+                </div>
             <div class="related">
                 <h4><?= __('Related Orders') ?></h4>
                 <?php if (!empty($customer->orders)) : ?>

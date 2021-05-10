@@ -142,6 +142,21 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                 </div>
             </li>
 
+            <!-- Nav Item - Inquiry Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Inquiries','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseInquiry"
+                   aria-expanded="true" aria-controls="collapseInquiry">
+                    <span>Inquiries</span>
+                </a>
+                <div id="collapseInquiry" class="collapse" aria-labelledby="headingUsers"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Inquiries</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Inquiries','action' => 'index']) ?>">View All Inquiries</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -185,12 +200,11 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                     <!-- Nav Item - Messages -->
 
                     <div class="topbar-divider d-none d-sm-block"></div>
-
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Paul</span>
                             <img class="img-profile rounded-circle"
                                  src="img/undraw_profile.svg">
                         </a>
@@ -223,7 +237,6 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
     <?= $this->Html->script('/vendor/jquery-easing/jquery.easing.min.js')?>
     <!-- Custom scripts for all pages-->
     <?= $this->Html->script('/js/sb-admin-2.min.js')?>
-
     <?= $this->fetch('script') ?>
 </body>
 </html>

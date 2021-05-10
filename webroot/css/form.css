@@ -24,10 +24,39 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color:#6c757d;
 }
-
+.yellowbutton{
+    background-color:#6c757d;
+}
 /* Add a background color and some padding around the form */
 .container1 {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:#f2f2f2;
     padding: 50px;
+}
+
+.container2 {
+    border-radius: 5px;
+    background-color:lightgreen;
+    padding: 50px;
+}
+.a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+.a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
 }

@@ -55,10 +55,10 @@ require("../templates/Pages/header.php");
         <div class="row">
             <div class="col-lg-12">
                 <h2>Our Products</h2>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
-                </ul>
+<!--                <ul class="breadcrumb">-->
+<!--                    <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                    <li class="breadcrumb-item active">Shop</li>-->
+<!--                </ul>-->
             </div>
         </div>
     </div>
@@ -115,16 +115,14 @@ require("../templates/Pages/header.php");
 
                                                         <div class="mask-icon">
                                                             <ul>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                                <li><data-toggle="tooltip" data-placement="right" title="Compare"><?= $this->Html->link(__('View'), ['action' => 'viewproduct', $product->id]) ?></i></li>
                                                             </ul>
                                                             <a class="cart" href="#">Add to Cart</a>
                                                         </div>
                                                     </div>
                                                     <div class="why-text">
                                                         <h4><td><?= h($product->name) ?></td></h4>
-                                                        <h5><td><?= $this->Number->format($product->price) ?></td> </h5>
+                                                        <h5><td>$<?= $this->Number->format($product->price) ?></td> </h5>
                                                     </div>
                                                 </div>
                                             </div>

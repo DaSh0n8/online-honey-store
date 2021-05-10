@@ -8,6 +8,7 @@ echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['bloc
 echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
 echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
+
 <div class="container-fluid">
     <h3><?= __('Products') ?></h3>
     <div class="card shadow mb-4">
@@ -29,7 +30,15 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
             </thead>
             <tbody>
                 <?php foreach ($products as $product): ?>
-                <tr>
+
+                <?php if(($product->quantity)<=10){
+                    $background="#FFCCCBB";
+                }
+                else{
+                    $background="#FFFFFF";
+                }
+                    ?>
+                <tr bgcolor="<?php echo $background;?>">
                     <td><?= $this->Number->format($product->id) ?></td>
                     <td><?= h($product->name) ?></td>
                     <td><?= $this->Number->format($product->price) ?></td>

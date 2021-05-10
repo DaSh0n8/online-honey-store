@@ -54,7 +54,6 @@ $this->Html->css('min', ['block' => true]);
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/logo.png">
 
-
     <!-- Bootstrap CSS -->
     <?= $this->Html->css('bootstrap.min') ?>
 
@@ -106,10 +105,10 @@ $this->Html->css('min', ['block' => true]);
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
-                            <li>
+                            <li size="30">
                                 <i class="fab fa-opencart"></i> 10% off your first purchase for new customers!
                             </li>
-                            <li>
+                            <li size="30">
                                 <i class="fab fa-opencart"></i> Get some healing honey as a special Mother's Day gift!
                             </li>
                         </ul>

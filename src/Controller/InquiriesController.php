@@ -52,7 +52,7 @@ class InquiriesController extends AppController
             if ($this->Inquiries->save($inquiry)) {
                 $this->Flash->success(__('The inquiry has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'pages','action'=>'../']);
             }
             $this->Flash->error(__('The inquiry could not be saved. Please, try again.'));
         }
@@ -102,4 +102,5 @@ class InquiriesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
 }

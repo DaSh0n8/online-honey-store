@@ -58,11 +58,6 @@ require("../templates/Pages/header.php");
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($items as $item): ?>
-                        <tr>
-                            <td><?=h($item->order_id) ?></td>
-                        </tr>
-                        <?php endforeach; ?>
 
                         <tr>
                             <td class="thumbnail-img">
@@ -72,15 +67,15 @@ require("../templates/Pages/header.php");
                             </td>
                             <td class="name-pr">
                                 <a href="#">
-                                    Lorem ipsum dolor sit amet
+                                    Manuka Honey 40+
                                 </a>
                             </td>
                             <td class="price-pr">
-                                <p>$ 80.0</p>
+                                <p>$29.95</p>
                             </td>
                             <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
                             <td class="total-pr">
-                                <p>$ 80.0</p>
+                                <p>$ 29.95</p>
                             </td>
                             <td class="remove-pr">
                                 <a href="#">

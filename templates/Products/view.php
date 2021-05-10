@@ -84,5 +84,6 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
                 <?php endif; ?>
             </div>
         </div>
-    </div></div></div></div>
+    </div></div>
+</div></div>
 
