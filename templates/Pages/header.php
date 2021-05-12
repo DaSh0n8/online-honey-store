@@ -166,8 +166,31 @@ $this->Html->css('min', ['block' => true]);
             </div>
             <div class="attr-nav">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="side-menu">                    <li class='nav-item'>
-                        <?= $this->Html->link(__('LogIn'), ['action' => '../Users/login']) ?>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Account</span>
+
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+                            <div class="attr-nav">
+                                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                                    <li class='nav-item'>
+                                        <?= $this->Html->link(__('Login'), ['action' => '../Users/login']) ?>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                                    <li class='nav-item'>
+                                        <?= $this->Html->link(__('Register'), ['action' => '../Users/add']) ?>
+                                    </li>
+                                </ul>
+                            </div>
+                            </a>
+                        </div>
+
+
                     </li>
                     </li>
                 </ul>

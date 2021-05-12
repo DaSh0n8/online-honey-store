@@ -130,27 +130,6 @@ class UsersController extends AppController
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);
         }
     }
-    public function login2()
-    {
-        $authentication = $this->request->getAttribute('authentication');
-        $this->request->allowMethod(['get', 'post']);
-        $result = $this->Authentication->getResult();
-        // regardless of POST or GET, redirect if user is logged in
-        if ($result->isValid()) {
-            $role = $authentication -> identifiers() -> get('role');
-            if ($role = ('admin')){
-                return $this->redirect(['controller'=>'Products','action'=>'index']);
-            }
-            else if ($role = ('customer')){
-                return $this->redirect(['controller'=>'Pages','action'=>'../']);
-            }
-        }
-        // display error if user submitted and authentication failed
-        if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error(__('Invalid username or password'));
-        }
-    }
-
 
 
 }
