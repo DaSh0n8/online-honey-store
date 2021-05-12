@@ -4,21 +4,17 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+
+echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['block' =>true]);
+echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
+echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="users view content">
+<div class="container-fluid">
             <h3><?= h($user->id) ?></h3>
-            <table>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="90%" cellspacing="0">
                 <tr>
                     <th><?= __('Email') ?></th>
                     <td><?= h($user->email) ?></td>
@@ -46,4 +42,5 @@
             </table>
         </div>
     </div>
+</div>
 </div>

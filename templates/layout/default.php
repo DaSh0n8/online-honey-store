@@ -91,6 +91,25 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                 </div>
             </li>
 
+            <!-- Nav Item - Agents Collaps Menu -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Agents','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseAgents"
+                   aria-expanded="true" aria-controls="collapseAgents">
+                    <span>Agents</span>
+                </a>
+                <div id="collapseAgents" class="collapse" aria-labelledby="headingAgents"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Agents</h6>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Agents','action' => 'index']) ?>">View All Agents</a>
+                        <a class="collapse-item" href="<?= $this->Url->build(['controller'=>'Agents','action' => 'add']) ?>">Add New Agents</a>
+
+                    </div>
+                </div>
+            </li>
+
+
 
             <!-- Nav Item - Orders Collapse Menu -->
             <li class="nav-item">
@@ -177,18 +196,18 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                 </button>
 
                 <!-- Topbar Search -->
-                <form
-                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                               aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+<!--                <form-->
+<!--                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">-->
+<!--                    <div class="input-group">-->
+<!--                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."-->
+<!--                               aria-label="Search" aria-describedby="basic-addon2">-->
+<!--                        <div class="input-group-append">-->
+<!--                            <button class="btn btn-primary" type="button">-->
+<!--                                <i class="fas fa-search fa-sm"></i>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
