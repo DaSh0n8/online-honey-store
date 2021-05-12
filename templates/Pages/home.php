@@ -76,7 +76,6 @@ $this->Html->css('min', ['block' => true]);
     <![endif]-->
 
 </head>
-
 <body>
 <!-- Start Main Top -->
 <div class="main-top">
@@ -119,7 +118,7 @@ $this->Html->css('min', ['block' => true]);
     </div>
 </div>
 <!-- End Main Top -->
-
+<?php echo $this->Identity->get('email')?>
 <!-- Start Main Top -->
 <header class="main-header">
     <!-- Start Navigation -->

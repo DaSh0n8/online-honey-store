@@ -5,7 +5,9 @@
  */
 
 ?>
-
+<?php
+if ($this->Identity->get('role') == ('admin')){
+?>
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-body">
@@ -29,3 +31,6 @@
         </div>
     </div>
 </div>
+    <?php
+}
+?>

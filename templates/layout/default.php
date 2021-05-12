@@ -60,6 +60,9 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
             </div>
 
             <!-- Nav Item - Products Collapse Menu -->
+            <?php
+            if ($this->Identity->get('role') == ('admin')){
+            ?>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="<?= $this->Url->build(['controller'=>'Products','action' => 'index']) ?>" data-toggle="collapse" data-target="#collapseProducts"
                    aria-expanded="true" aria-controls="collapseProducts">
@@ -175,6 +178,9 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                     </div>
                 </div>
             </li>
+                <?php
+            }
+            ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -220,6 +226,9 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
 
                     <div class="topbar-divider d-none d-sm-block"></div>
                     <!-- Nav Item - User Information -->
+                    <?php
+                    if ($this->Identity->get('role') == ('admin')){
+                    ?>
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -238,6 +247,10 @@ $this->Html->script('sb-admin-2.min.js', ['block'=>true]);
                         </div>
 
                     </li>
+                        <?php
+                    }
+                    ?>
+
 
                 </ul>
 

@@ -5,6 +5,9 @@
  * @var \App\Model\Entity\Order[]|\Cake\Collection\CollectionInterface $orders
  */
 ?>
+<?php
+if ($this->Identity->get('role') == ('admin')){
+?>
 <div class="orders index content">
     <h3><?= __('Orders') ?></h3>
     <div class="table-responsive">
@@ -50,3 +53,6 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+    <?php
+}
+?>

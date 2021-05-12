@@ -5,6 +5,9 @@
  * @var \App\Model\Entity\Order $order
  */
 ?>
+<?php
+if ($this->Identity->get('role') == ('admin')){
+?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -35,3 +38,6 @@
         </div>
     </div>
 </div>
+    <?php
+}
+?>

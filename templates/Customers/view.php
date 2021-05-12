@@ -8,6 +8,9 @@ echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'
 echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 
 ?>
+<?php
+if ($this->Identity->get('role') == ('admin')){
+?>
 <div class="container-fluid">
             <h3><?= h($customer->first_name) ?> <?= h($customer->last_name) ?> </h3>
         <div class="card shadow mb-4">
@@ -92,3 +95,6 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
         </div>
     </div>
 </div>
+    <?php
+}
+?>

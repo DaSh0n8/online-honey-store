@@ -8,8 +8,9 @@ echo $this->Html->css('/vendor/datatables/dataTables.bootstrap4.min.css', ['bloc
 echo $this->Html->script('/vendor/datatables/jquery.dataTables.min.js', ['block'=>true]);
 echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
 ?>
-
-
+<?php
+if ($this->Identity->get('role') == ('admin')){
+    ?>
 <div class="container-fluid">
     <h3><?= h($product->name) ?></h3>
     <div class="card shadow mb-4">
@@ -87,3 +88,6 @@ echo $this->Html->script('/vendor/jquery.dataTables.min.js', ['block' => true]);
     </div></div>
 </div></div>
 
+<?php
+}
+?>
