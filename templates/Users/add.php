@@ -5,9 +5,9 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
-    <div class="column-responsive column-80">
-        <div class="users form content">
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-body">
             <?= $this->Form->create($user) ?>
             <fieldset>
                 <legend><?= __('Add User') ?></legend>
