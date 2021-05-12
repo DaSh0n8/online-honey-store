@@ -28,13 +28,6 @@
                     <td><?= h($user->role) ?></td>
                     <td><?= h($user->created) ?></td>
                     <td><?= h($user->modified) ?></td>
-                        <?=
-                        h($user->role);
-                        if ($user->role=='admin'){
-                            echo ' admin';
-                        }else{
-                            echo'customer';
-                        }?>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>

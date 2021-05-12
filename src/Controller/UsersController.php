@@ -15,9 +15,14 @@ class UsersController extends AppController
     {
         $this->request->allowMethod(['get', 'post']);
         $result = $this->Authentication->getResult();
+
         // regardless of POST or GET, redirect if user is logged in
         if ($result->isValid()) {
-            return $this->redirect(['controller'=>'pages','action'=>'../']);
+            if ($this->Authentication->getIdentity()->getOriginalData()->role == ('admin')){
+                return $this->redirect(['controller'=>'Products','action'=>'index']);
+            }elseif ($this->Authentication->getIdentity()->getOriginalData()->role == ('customer')){
+                return $this->redirect(['controller'=>'Pages','action'=>'../']);
+            }
         }
         // display error if user submitted and authentication failed
         if ($this->request->is('post') && !$result->isValid()) {
@@ -32,6 +37,7 @@ class UsersController extends AppController
     public function index()
     {
         $users = $this->paginate($this->Users);
+
         $this->set(compact('users'));
     }
 
@@ -121,7 +127,27 @@ class UsersController extends AppController
         // regardless of POST or GET, redirect if user is logged in
         if ($result->isValid()) {
             $this->Authentication->logout();
-            return $this->redirect(['controller'=>'pages','action'=>'../']);
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        }
+    }
+    public function login2()
+    {
+        $authentication = $this->request->getAttribute('authentication');
+        $this->request->allowMethod(['get', 'post']);
+        $result = $this->Authentication->getResult();
+        // regardless of POST or GET, redirect if user is logged in
+        if ($result->isValid()) {
+            $role = $authentication -> identifiers() -> get('role');
+            if ($role = ('admin')){
+                return $this->redirect(['controller'=>'Products','action'=>'index']);
+            }
+            else if ($role = ('customer')){
+                return $this->redirect(['controller'=>'Pages','action'=>'../']);
+            }
+        }
+        // display error if user submitted and authentication failed
+        if ($this->request->is('post') && !$result->isValid()) {
+            $this->Flash->error(__('Invalid username or password'));
         }
     }
 

@@ -15,8 +15,10 @@
                     echo $this->Form->control('id');
                     echo $this->Form->control('email');
                     echo $this->Form->control('password');
-                    echo $this->Form->control('role');
+
+                    echo $this->Form->control('role', ['type'=>'hidden']);
                 ?>
+
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>
