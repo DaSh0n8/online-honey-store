@@ -19,13 +19,13 @@ if ($this->Identity->get('role') == ('admin')){
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
                 <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('price');
-                    echo $this->Form->control('sku');
+                    echo $this->Form->control('name',['type'=>'']);
+                    echo $this->Form->control('price',['type'=>'number','min'=>0]);
+                    echo $this->Form->control('sku',['type'=>'number','min'=>0]);
                     echo $this->Form->control('description');
-                    echo $this->Form->control('weight');
+                    echo $this->Form->control('weight',['type'=>'number','min'=>0]);
                     echo $this->Form->control('category');
-                    echo $this->Form->control('quantity');
+                    echo $this->Form->control('quantity',['type'=>'number','min'=>0]);
                     echo $this->Form->control('image_file',['type'=>'file']);
                 ?>
             </fieldset>

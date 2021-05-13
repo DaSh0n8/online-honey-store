@@ -36,26 +36,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 require("header.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<!-- Basic -->
-<!-- Bootstrap CSS -->
-<?= $this->Html->css('bootstrap.min') ?>
+<head lang="en">
 
-<!-- Site CSS -->
-<?= $this->Html->css('style') ?>
-
-<!-- Responsive CSS -->
-<?= $this->Html->css('responsive') ?>
-
-<!-- Custom CSS -->
-<?= $this->Html->css('custom') ?>
-
-<?= $this->Html->css('form') ?>
-
-<?= $this->fetch('meta') ?>
-<?= $this->fetch('css') ?>
-<?= $this->fetch('script') ?>
-
+</head>
     <?= $this->Html->charset() ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -94,7 +77,7 @@ require("header.php");
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+</head>
 <!-- Start Top Search -->
 <div class="top-search">
     <div class="container">
@@ -286,8 +269,8 @@ Box Hill, Melbourne</span> </div>
             <?php
             echo $this->Form->control('first_name');
             echo $this->Form->control('last_name');
-            echo $this->Form->control('phone_number');
-            echo $this->Form->control('email');
+            echo $this->Form->control('phone_number',['type'=>'number','min'=>0]);
+            echo $this->Form->control('email',['type'=>'email']);
             echo $this->Form->control('message');
             ?>
         </fieldset>

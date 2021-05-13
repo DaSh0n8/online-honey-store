@@ -111,8 +111,11 @@ $this->Html->css('min', ['block' => true]);
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
-                            <li>
-                                <i class="fab fa-opencart"></i> 10% off your first purchase for new customers!
+                            <li size="30">
+                                <i class="fab fa-opencart" style="font-size: 20px"></i> <i style="font-size: 20px">10% off your first purchase for new customers!</i>
+                            </li>
+                            <li size="30">
+                                <i class="fab fa-opencart" style="font-size: 20px"></i> <i style="font-size: 20px">Get some healing honey as a special Mother's Day gift!</i>
                             </li>
                         </ul>
                     </div>
