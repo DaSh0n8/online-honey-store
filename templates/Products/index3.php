@@ -117,9 +117,8 @@ require("../templates/Pages/header.php");
 
                                                         <div class="mask-icon">
                                                             <ul>
-                                                                <li><data-toggle="tooltip" data-placement="right" title="Compare"><?= $this->Html->link(__('View'), ['action' => 'viewproduct', $product->id]) ?></i></li>
+                                                                <li><data-toggle="tooltip" data-placement="right" title="Compare"><?= $this->Html->link(__('View product'), ['action' => 'viewproduct', $product->id]) ?></i></li>
                                                             </ul>
-                                                            <a class="cart" href="#">Add to Cart</a>
                                                         </div>
                                                     </div>
                                                     <div class="why-text">

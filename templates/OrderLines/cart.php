@@ -61,12 +61,15 @@ require("../templates/Pages/header.php");
                         </tr>
                         </thead>
                         <tbody>
+                        <?php $cart_ttl=0;?>
                         <?php foreach($cart as $item):?>
+
                         <?php
                            /* if($item['product_id'] == ){
 
                             }*/
-                        $total_qty = $item['product_price']*$item['quantity']
+                        $total_qty = $item['product_price']*$item['quantity'];
+                        $cart_ttl+=$total_qty;
 
                             ?>
                             <tr>
@@ -80,7 +83,7 @@ require("../templates/Pages/header.php");
                                     <?= $this->Number->format($item['quantity']) ?>
                                     </td>
                                 <td class="total-pr">
-                                    <?= $this->Number->format($total_qty) ?>
+                                    $<?= $this->Number->format($total_qty) ?>
                                     <p></p>
                                 </td>
                             </tr>
@@ -96,9 +99,7 @@ require("../templates/Pages/header.php");
 
             </div>
             <div class="col-lg-6 col-sm-6">
-                <div class="update-box">
-                    <input value="Update Cart" type="submit">
-                </div>
+
             </div>
         </div>
 
@@ -108,7 +109,7 @@ require("../templates/Pages/header.php");
                 <div class="order-box">
                     <div class="d-flex gr-total">
                         <h5>Grand Total</h5>
-                        <div class="ml-auto h5"> $ 388 </div>
+                        <div class="ml-auto h5">  $ <?= $this->Number->format($cart_ttl) ?> </div>
                     </div>
                     <hr> </div>
             </div>

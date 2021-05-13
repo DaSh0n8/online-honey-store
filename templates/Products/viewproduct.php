@@ -25,6 +25,7 @@ require("../templates/Pages/header.php");
 <!--                    <li class="breadcrumb-item"><a href="#">Home</a></li>-->
 <!--                    <li class="breadcrumb-item active">Shop</li>-->
 <!--                </ul>-->
+
             </div>
         </div>
     </div>
@@ -34,6 +35,7 @@ require("../templates/Pages/header.php");
 <!-- Start Product Section  -->
 
 <!-- Start Shop Detail  -->
+<div class="message success" ><?= $this->Flash->render() ?></div>
 <div class="shop-detail-box-main">
     <div class="container">
         <div class="row">
