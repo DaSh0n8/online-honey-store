@@ -85,6 +85,4 @@ class PagesController extends AppController
         $this->Authentication->addUnauthenticatedActions(['display']);
 
     }
-
-
 }

@@ -4,7 +4,7 @@
 // username => root
 // password => empty
 // database name => staff
-$conn = mysqli_connect("localhost", "wilbertcakeproject", "wilbertcakeproject", "wilbertcakeproject");
+$conn = mysqli_connect("localhost", "arunicakeproj", "arunicakeproj", "arunicakeproj");
 
 // Check connection
 if($conn === false){

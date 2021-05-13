@@ -16,6 +16,9 @@ class OrderLinesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+
+
+
     public function index()
     {
         $this->paginate = [
@@ -30,14 +33,20 @@ class OrderLinesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+
     public function cart()
     {
-        $this->paginate = [
-            'contain' => ['Orders', 'Products'],
-        ];
-        $orderLines = $this->OrderLines->find();
+        $this->loadModel('Products');
+        $items = $this->Products->find('all');
+        $products = $this->request->getSession()->read('Cart');
+        $products =
+        $this->set(compact('products'));
+        $this->set(compact('items'));
 
-        $this->set(compact('orderLines'));
+    }
+
+    public function checkout(){
+
     }
 
     /**

@@ -46,10 +46,28 @@ class ProductsController extends AppController
     public function viewproduct($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['OrderLines'],
+            'contain' => ['OrderLines']
         ]);
 
         $this->set(compact('product'));
+    }
+
+    public function addproduct() {
+
+        $formData = array($this->request->getData());
+        //[$id, $qty] = $formData;
+        $cartSession=$this->request->getSession();
+        $cartSession->read('Cart.info');
+        //$this->request->getSession()->write('Cart.info', $formData);
+        if($cartSession->check('Cart')==null){
+            $cartSession->write('Cart', $formData);
+        }
+        else{
+            $data= $this->request->getSession()->read('Cart');
+            $cartSession->write('Cart', array_merge($data, $formData));
+        }
+        $this->Flash->success('Your cart has been updated.');
+        return $this->redirect($this->referer());
     }
 
     /**

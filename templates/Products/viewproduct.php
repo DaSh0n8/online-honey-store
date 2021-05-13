@@ -47,7 +47,10 @@ require("../templates/Pages/header.php");
                     <p class="available-stock"><span><b>Qty:</b><?= $this->Number->format($product->quantity) ?></span><p>
                     <h4>Description:</h4>
                     <p><?= h($product->description) ?></p>
-                    <ul>
+
+
+
+                    <!--<ul>
                         <li>
                             <div class="form-group quantity-box">
                                 <label class="control-label">Quantity</label>
@@ -58,10 +61,24 @@ require("../templates/Pages/header.php");
 
                     <div class="price-box-bar">
                         <div class="cart-and-bay-btn">
-                            <a class="btn hvr-hover" data-fancybox-close="" href=<?= $this->Url->build(['controller'=>'Products','action' => 'viewproduct', $product->id]) ?>">Add to cart</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href=<?/*= $this->Url->build(['controller'=>'Products','action' => 'addProduct', $product->id]) */?>">Add to cart</a>
                         </div>
                         </div>
-                    </div>
+                    </div>-->
+
+                    <?php echo $this->Form->create($product, array('id' => 'add-form', 'url' => array('controller' => 'Products', 'action' => 'addproduct')));?>
+                    <?php
+                    echo $this->Form->hidden('product_id', array('value' => $product->id));
+                    echo $this->Form->hidden('product_name', array('value' => $product->name));
+                    echo $this->Form->hidden('product_price', array('value' => $product->price));
+                    echo $this->Form->number('quantity', array('step' => '1', 'min' => '1', 'max' => '10', 'value' => '1', 'inputmode' => 'numeric'));
+                    echo $this->Form->submit('Add to Cart');
+                    ?>
+                    <?php $this->Form->end() ?>
+
+<!--<div>8
+
+</div>-->
 
                 </div>
             </div>
@@ -70,9 +87,8 @@ require("../templates/Pages/header.php");
     </div>
 </div>
 <!-- End Cart -->
-
-
-
+ <?= $this->Flash->render() ?>
+ <?= $this->fetch('content') ?>
 <!-- Start Footer  -->
 <footer>
     <div class="footer-main">

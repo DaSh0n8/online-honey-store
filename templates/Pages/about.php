@@ -46,7 +46,7 @@ require("header.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Paul's Healthy Honey Iteration 1 Index</title>
+    <title>Paul's Healthy Honey Iteration 2</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
