@@ -61,6 +61,7 @@ require("../templates/Pages/header.php");
                         </tr>
                         </thead>
                         <tbody>
+
                         <?php $cart_ttl=0;?>
                         <?php foreach($cart as $item):?>
 
@@ -99,7 +100,6 @@ require("../templates/Pages/header.php");
 
             </div>
             <div class="col-lg-6 col-sm-6">
-
             </div>
         </div>
 

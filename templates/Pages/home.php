@@ -90,11 +90,7 @@ $this->Html->css('min', ['block' => true]);
                 <div class="right-phone-box">
                     <p>Call Us : <a href="#"> 0412 804 035</a></p>
                 </div>
-                <div class="our-link">
-                    <ul>
-                        <li><a href="#"><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?></a></li>
-                    </ul>
-                </div>
+
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
@@ -141,6 +137,9 @@ $this->Html->css('min', ['block' => true]);
                     </li>
                     <li class = 'nav-item'>
                         <?= $this->Html->link(__('Products'), ['action' => '../Products/index3']) ?>
+                    </li>
+                    <li class="'nav-item">
+                        <?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
                     </li>
                 </ul>
             </div>
