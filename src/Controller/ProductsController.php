@@ -182,7 +182,7 @@ class ProductsController extends AppController
 
         // actions public, skipping the authentication check
 
-        $this->Authentication->addUnauthenticatedActions(['index3']);
+        $this->Authentication->addUnauthenticatedActions(['index3','viewproduct','addproduct']);
 
     }
 
