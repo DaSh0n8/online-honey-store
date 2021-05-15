@@ -46,7 +46,7 @@ class ProductsController extends AppController
     public function viewproduct($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['OrderLines']
+            'contain' => ['OrderLines'],
         ]);
 
         $this->set(compact('product'));
@@ -182,7 +182,7 @@ class ProductsController extends AppController
 
         // actions public, skipping the authentication check
 
-        $this->Authentication->addUnauthenticatedActions(['index3','viewproduct','addproduct']);
+        $this->Authentication->addUnauthenticatedActions(['index3']);
 
     }
 

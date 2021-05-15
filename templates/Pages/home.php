@@ -92,6 +92,7 @@ $this->Html->css('min', ['block' => true]);
                 </div>
 
             </div>
+
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                 <div class="text-slid-box">
@@ -191,11 +192,11 @@ $this->Html->css('min', ['block' => true]);
                 <div class="attr-nav">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a  href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Account</span>
+                                <span>Account</span>
                             </a>
-                            <!-- Dropdown - User Information -->
+                            <!-- Dropdown -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
                                 <div class="attr-nav">

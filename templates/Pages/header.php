@@ -1,5 +1,4 @@
 <?php
-
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -14,7 +13,6 @@
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
-
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
@@ -71,7 +69,7 @@ $this->Html->css('min', ['block' => true]);
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -119,7 +117,7 @@ $this->Html->css('min', ['block' => true]);
     </div>
 </div>
 <!-- End Main Top -->
-
+<?php echo $this->Identity->get('email')?>
 <!-- Start Main Top -->
 <header class="main-header">
     <!-- Start Navigation -->
@@ -202,9 +200,9 @@ $this->Html->css('min', ['block' => true]);
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Account</span>
+                                    <span>Account</span>
                                 </a>
-                                <!-- Dropdown - User Information -->
+                                <!-- Dropdown-->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                      aria-labelledby="userDropdown">
                                     <div class="attr-nav">
@@ -227,6 +225,7 @@ $this->Html->css('min', ['block' => true]);
                     </div>
                     <?php
                 }?>
+
             <!-- End Atribute Navigation -->
         </div>
         <!-- Start Side Menu -->
@@ -263,21 +262,22 @@ $this->Html->css('min', ['block' => true]);
 <!-- End Main Top -->
 
 <!-- ALL JS FILES -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../../webroot/js/jquery-3.2.1.min.js"></script>
+<script src="../../webroot/js/popper.min.js"></script>
+<script src="../../webroot/js/bootstrap.min.js"></script>
 <!-- ALL PLUGINS -->
-<script src="js/jquery.superslides.min.js"></script>
-<script src="js/bootstrap-select.js"></script>
-<script src="js/inewsticker.js"></script>
-<script src="js/bootsnav.js."></script>
-<script src="js/images-loded.min.js"></script>
-<script src="js/isotope.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/baguetteBox.min.js"></script>
-<script src="js/form-validator.min.js"></script>
-<script src="js/contact-form-script.js"></script>
-<script src="js/custom.js"></script>
+<script src="../../webroot/js/jquery.superslides.min.js"></script>
+<script src="../../webroot/js/bootstrap-select.js"></script>
+<script src="../../webroot/js/inewsticker.js"></script>
+<script src="../../webroot/js/bootsnav.js"></script>
+<script src="../../webroot/js/images-loded.min.js"></script>
+<script src="../../webroot/js/isotope.min.js"></script>
+<script src="../../webroot/js/owl.carousel.min.js"></script>
+<script src="../../webroot/js/baguetteBox.min.js"></script>
+<script src="../../webroot/js/form-validator.min.js"></script>
+<script src="../../webroot/js/contact-form-script.js"></script>
+<script src="../../webroot/js/custom.js"></script>
 </body>
 <?= $this->fetch('script') ?>
+</html>
 
