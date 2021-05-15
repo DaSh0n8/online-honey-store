@@ -32,7 +32,7 @@ $this->Html->css('bootstrap.min', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
 $this->Html->css('responsive', ['block' => true]);
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
-require("header.php");
+require("../Pages/header.php");
 ?>
 
 <!DOCTYPE html>

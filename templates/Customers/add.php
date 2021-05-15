@@ -19,11 +19,11 @@ if ($this->Identity->get('role') == ('admin')){
                 <?php
                     echo $this->Form->control('first_name');
                     echo $this->Form->control('last_name');
-                    echo $this->Form->control('phone_number');
-                    echo $this->Form->control('email_address');
+                    echo $this->Form->control('phone_number',['type'=>'number','min'=>0]);
+                    echo $this->Form->control('email_address',['type'=>'email']);
                     echo $this->Form->control('street_address');
                     echo $this->Form->control('suburb');
-                    echo $this->Form->control('post_code');
+                    echo $this->Form->control('post_code',['type'=>'number']);
                     echo $this->Form->control('state');
                     echo $this->Form->control('marketing_emails');
                 ?>

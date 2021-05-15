@@ -94,12 +94,6 @@ $this->Html->css('min', ['block' => true]);
                 <div class="right-phone-box">
                     <p>Call Us :- <a href="#"> 0412 804 035</a></p>
                 </div>
-                <div class="our-link">
-                    <ul>
-                        <li><a href="#"><?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
-                            </a></li>
-                    </ul>
-                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="login-box">
@@ -111,8 +105,11 @@ $this->Html->css('min', ['block' => true]);
                 <div class="text-slid-box">
                     <div id="offer-box" class="carouselTicker">
                         <ul class="offer-box">
-                            <li>
-                                <i class="fab fa-opencart"></i> 10% off your first purchase for new customers!
+                            <li size="30">
+                                <i class="fab fa-opencart" style="font-size: 20px"></i> <i style="font-size: 20px">10% off your first purchase for new customers!</i>
+                            </li>
+                            <li size="30">
+                                <i class="fab fa-opencart" style="font-size: 20px"></i> <i style="font-size: 20px">Get some healing honey as a special Mother's Day gift!</i>
                             </li>
                         </ul>
                     </div>
@@ -150,6 +147,9 @@ $this->Html->css('min', ['block' => true]);
                     </li>
                     <li class='nav-item'>
                         <?= $this->Html->link(__('Products'), ['action' => '../Products/index3']) ?>
+                    </li>
+                    <li class="'nav-item">
+                        <?= $this->Html->link(__('Our Location'), ['action' => '../Pages/Location']) ?>
                     </li>
                 </ul>
             </div>
