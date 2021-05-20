@@ -56,7 +56,7 @@ class OrderLinesController extends AppController
     }
 
     public function checkout(){
-        
+
         // 下面为申请app获得的clientId和clientSecret，必填项，否则无法生成token。
 $clientId = 'ATnuSLiYPPpNovryQJ4ZsiD1FfR2Jelv5GBkSGNjd59Ef8SW8XEH48fFwOf7L9wcyZARGx3LanesBuvb';
 $clientSecret = 'EAadzJ40KVcpBanjhdAR13N2mxPBi2O7uQYMs8h-wMga5scKmwHEyCIOLLgQk2FLEcEOc2xS5ORwyQSo';
@@ -71,13 +71,13 @@ $apiContext->setConfig(
         'mode' => 'sandbox',
         'log.LogEnabled' => true,
         'log.FileName' => '../PayPal.log',
-        'log.LogLevel' => 'DEBUG', 
+        'log.LogLevel' => 'DEBUG',
         'cache.enabled' => true
     )
-);        
-        
-        
-        
+);
+
+
+
 $payer = new Payer();
 $payer->setPaymentMethod("paypal");
 
@@ -90,13 +90,13 @@ $item1 = new Item();
 $item1->setName('test pro 1')
     ->setCurrency('USD')
     ->setQuantity(1)
-    ->setSku("testpro1_01") 
+    ->setSku("testpro1_01")
     ->setPrice(2.3);
 $item2 = new Item();
 $item2->setName('test pro 2')
     ->setCurrency('USD')
     ->setQuantity(5)
-    ->setSku("testpro2_01") 
+    ->setSku("testpro2_01")
     ->setPrice(1.1);
 $itemList = new ItemList();
 $itemList->setItems(array($item1, $item2));
@@ -253,9 +253,9 @@ exit;
         // for all controllers in our application, make index and view
 
         // actions public, skipping the authentication check
-        $this->Authentication->addUnauthenticatedActions(['cart']);
+        $this->Authentication->addUnauthenticatedActions(['cart','checkout']);
         $this->Authentication->addUnauthenticatedActions(['checkout']);
-        
+
 
     }
 }
