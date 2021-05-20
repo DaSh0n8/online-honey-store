@@ -131,7 +131,7 @@ $this->Html->css('min', ['block' => true]);
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class = 'nav-item'>
-                        <?= $this->Html->link(__('Home'), ['action' => '../']) ?>
+                        <?= $this->Html->link(__('Homee'), ['action' => '../']) ?>
                     </li>
                     <li class = 'nav-item'>
                         <?= $this->Html->link(__('About Us'), ['action' => '../Pages/about']) ?>
