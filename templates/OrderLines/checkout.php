@@ -45,7 +45,7 @@ require("../templates/Pages/header.php");
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="username">Username *</label>
+                                <label for="username">Username *</  label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="username" placeholder="" required>
                                     <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
