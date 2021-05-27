@@ -22,11 +22,6 @@ use Cake\Http\Exception\NotFoundException;
 
 $this->disableAutoLayout();
 
-if (!Configure::read('debug')) :
-    throw new NotFoundException(
-        'Please replace templates/Pages/home.php with your own version or re-enable debug mode.'
-    );
-endif;
 $this->Html->css('custom', ['block' => true]);
 $this->Html->css('bootstrap.min', ['block' => true]);
 $this->Html->css(' style', ['block' => true]);
@@ -44,7 +39,7 @@ $this->Html->css('min', ['block' => true]);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Paul's Healthy Honey Iteration 1 Index</title>
+    <title>Paul's Healthy Honey Iteration 2 Index</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -69,6 +64,7 @@ $this->Html->css('min', ['block' => true]);
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
 
 
     <!--[if lt IE 9]>
@@ -217,10 +213,10 @@ $this->Html->css('min', ['block' => true]);
                                             </li>
                                         </ul>
                                     </div>
-                                    </a>
+
                                 </div>
                             </li>
-                            </li>
+
                         </ul>
                     </div>
                     <?php

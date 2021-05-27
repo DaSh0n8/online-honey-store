@@ -38,7 +38,7 @@ class OrderLinesController extends AppController
 
         $this->set(compact('orderLines'));
     }
-    /**
+    /**item['quantity'
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
@@ -70,6 +70,7 @@ class OrderLinesController extends AppController
                 $clientSecret
             )
         );
+
         $apiContext->setConfig(
             array(
                 'mode' => 'sandbox',
@@ -80,8 +81,6 @@ class OrderLinesController extends AppController
             )
         );
 
-
-
         $payer = new Payer();
         $payer->setPaymentMethod("paypal");
 
@@ -90,6 +89,9 @@ class OrderLinesController extends AppController
          * 详情信息：单价、收货地址等请结合自己的业务去数据库或者其他存储数据的地方查询
          * 这里只是演示支付流程，不结合实际业务
          */
+
+
+
         $item1 = new Item();
         $item1->setName('test pro 1')
             ->setCurrency('USD')
@@ -193,8 +195,7 @@ class OrderLinesController extends AppController
             $orderLine = $this->OrderLines->patchEntity($orderLine, $this->request->getData());
             if ($this->OrderLines->save($orderLine)) {
                 $this->Flash->success(__('The order line has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'cart']);
             }
             $this->Flash->error(__('The order line could not be saved. Please, try again.'));
         }
@@ -260,6 +261,9 @@ class OrderLinesController extends AppController
         $this->Authentication->addUnauthenticatedActions(['cart','checkout']);
         $this->Authentication->addUnauthenticatedActions(['checkout']);
 
+
+    }
+    public function confirmation(){
 
     }
 }

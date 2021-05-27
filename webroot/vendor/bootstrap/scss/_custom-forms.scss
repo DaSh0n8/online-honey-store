@@ -74,7 +74,9 @@
 // Build the custom controls out of pseudo-elements.
 
 .custom-control-label {
+
   position: relative;
+    display: block;
   margin-bottom: 0;
   color: $custom-control-label-color;
   vertical-align: top;

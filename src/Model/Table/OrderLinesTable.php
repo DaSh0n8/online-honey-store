@@ -67,6 +67,64 @@ class OrderLinesTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
+            ->scalar('first_name')
+            ->maxLength('first_name', 100)
+            ->requirePresence('first_name', 'create')
+            ->notEmptyString('first_name');
+
+        $validator
+            ->scalar('last_name')
+            ->maxLength('last_name', 100)
+            ->requirePresence('last_name', 'create')
+            ->notEmptyString('last_name');
+
+        $validator
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmptyString('email');
+
+        $validator
+            ->scalar('address_line_1')
+            ->maxLength('address_line_1', 100)
+            ->requirePresence('address_line_1', 'create')
+            ->notEmptyString('address_line_1');
+
+        $validator
+            ->scalar('address_line_2')
+            ->maxLength('address_line_2', 100)
+            ->requirePresence('address_line_2', 'create')
+            ->notEmptyString('address_line_2');
+
+        $validator
+            ->scalar('country')
+            ->maxLength('country', 100)
+            ->requirePresence('country', 'create')
+            ->notEmptyString('country');
+
+        $validator
+            ->scalar('state')
+            ->maxLength('state', 10)
+            ->requirePresence('state', 'create')
+            ->notEmptyString('state');
+
+        $validator
+            ->integer('post_code')
+            ->requirePresence('post_code', 'create')
+            ->notEmptyString('post_code');
+
+        $validator
+            ->scalar('payment_method')
+            ->maxLength('payment_method', 20)
+            ->requirePresence('payment_method', 'create')
+            ->notEmptyString('payment_method');
+
+        $validator
+            ->scalar('ship_method')
+            ->maxLength('ship_method', 20)
+            ->requirePresence('ship_method', 'create')
+            ->notEmptyString('ship_method');
+
+        $validator
             ->integer('quantity')
             ->requirePresence('quantity', 'create')
             ->notEmptyString('quantity');
