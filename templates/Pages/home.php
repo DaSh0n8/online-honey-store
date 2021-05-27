@@ -171,12 +171,12 @@ $this->Html->css('min', ['block' => true]);
                                 <div class="attr-nav">
                                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                         <li class='nav-item'>
-                                            <?= $this->Html->link(__('Logout'), ['action' => '../Users/logout']) ?>
+                                            <?= $this->Html->link(__('Logout'), ['controller' => 'Users','action' => 'logout']) ?>
                                         </li>
                                     </ul>
                                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                         <li class='nav-item'>
-                                            <?= $this->Html->link(__('Register'), ['action' => '../Users/add']) ?>
+                                            <?= $this->Html->link(__('Register'), ['controller' => 'Users','action' => 'add']) ?>
                                         </li>
                                     </ul>
                                 </div>
@@ -202,12 +202,12 @@ $this->Html->css('min', ['block' => true]);
                                 <div class="attr-nav">
                                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                         <li class='nav-item'>
-                                            <?= $this->Html->link(__('Login'), ['action' => '../Users/login']) ?>
+                                            <?= $this->Html->link(__('Login'), ['controller' => 'Users','action' => 'login']) ?>
                                         </li>
                                     </ul>
                                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                         <li class='nav-item'>
-                                            <?= $this->Html->link(__('Register'), ['action' => '../Users/add']) ?>
+                                            <?= $this->Html->link(__('Register'), ['controller' => 'Users','action' => 'add']) ?>
                                         </li>
                                     </ul>
                                 </div>

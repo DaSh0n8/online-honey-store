@@ -177,12 +177,12 @@ $this->Html->css('min', ['block' => true]);
                                     <div class="attr-nav">
                                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                             <li class='nav-item'>
-                                                <?= $this->Html->link(__('Logout'), ['action' => '../Users/logout']) ?>
+                                                <?= $this->Html->link(__('Logout'), ['controller' => 'Users','action' => 'logout']) ?>
                                             </li>
                                         </ul>
                                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                             <li class='nav-item'>
-                                                <?= $this->Html->link(__('Register'), ['action' => '../Users/add']) ?>
+                                                <?= $this->Html->link(__('Register'), ['controller' => 'Users','action' => 'add']) ?>
                                             </li>
                                         </ul>
                                     </div>
@@ -208,12 +208,12 @@ $this->Html->css('min', ['block' => true]);
                                     <div class="attr-nav">
                                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                             <li class='nav-item'>
-                                                <?= $this->Html->link(__('Login'), ['action' => '../Users/login']) ?>
+                                                <?= $this->Html->link(__('Login'), ['controller' => 'Users','action' => 'login']) ?>
                                             </li>
                                         </ul>
                                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                                             <li class='nav-item'>
-                                                <?= $this->Html->link(__('Register'), ['action' => '../Users/add']) ?>
+                                                <?= $this->Html->link(__('Register'), ['controller' => 'Users','action' => 'add']) ?>
                                             </li>
                                         </ul>
                                     </div>
@@ -262,21 +262,21 @@ $this->Html->css('min', ['block' => true]);
 <!-- End Main Top -->
 
 <!-- ALL JS FILES -->
-<script src="../../webroot/js/jquery-3.2.1.min.js"></script>
-<script src="../../webroot/js/popper.min.js"></script>
-<script src="../../webroot/js/bootstrap.min.js"></script>
+<script src="../webroot/js/jquery-3.2.1.min.js"></script>
+<script src="../webroot/js/popper.min.js"></script>
+<script src="../webroot/js/bootstrap.min.js"></script>
 <!-- ALL PLUGINS -->
-<script src="../../webroot/js/jquery.superslides.min.js"></script>
-<script src="../../webroot/js/bootstrap-select.js"></script>
-<script src="../../webroot/js/inewsticker.js"></script>
-<script src="../../webroot/js/bootsnav.js"></script>
-<script src="../../webroot/js/images-loded.min.js"></script>
-<script src="../../webroot/js/isotope.min.js"></script>
-<script src="../../webroot/js/owl.carousel.min.js"></script>
-<script src="../../webroot/js/baguetteBox.min.js"></script>
-<script src="../../webroot/js/form-validator.min.js"></script>
-<script src="../../webroot/js/contact-form-script.js"></script>
-<script src="../../webroot/js/custom.js"></script>
+<script src="../webroot/js/jquery.superslides.min.js"></script>
+<script src="../webroot/js/bootstrap-select.js"></script>
+<script src="../webroot/js/inewsticker.js"></script>
+<script src="../webroot/js/bootsnav.js"></script>
+<script src="../webroot/js/images-loded.min.js"></script>
+<script src="../webroot/js/isotope.min.js"></script>
+<script src="../webroot/js/owl.carousel.min.js"></script>
+<script src="../webroot/js/baguetteBox.min.js"></script>
+<script src="../webroot/js/form-validator.min.js"></script>
+<script src="../webroot/js/contact-form-script.js"></script>
+<script src="../webroot/js/custom.js"></script>
 </body>
 <?= $this->fetch('script') ?>
 </html>
