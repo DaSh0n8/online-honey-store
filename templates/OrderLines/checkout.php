@@ -2,6 +2,8 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\OrderLine[]|\Cake\Collection\CollectionInterface $items
+*@var \App\Model\Entity\Product $products
+ *  * @var \App\Model\Entity\Order $orders
  */
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
@@ -43,6 +45,27 @@ require("../templates/Pages/header.php");
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                         <div class="title-left">
+                            <?= $this->Form->create(null, array('url' => ['controller'=>'OrderLines','action'=>'add'])) ?>
+                            <fieldset>
+                                <legend><?= __('Add Order Line') ?></legend>
+                                <?php
+                                echo $this->Form->control('first_name');
+                                echo $this->Form->control('last_name');
+                                echo $this->Form->control('email');
+                                echo $this->Form->control('address_line_1');
+                                echo $this->Form->control('address_line_2');
+                                echo $this->Form->control('country');
+                                echo $this->Form->control('state');
+                                echo $this->Form->control('post_code');
+                                echo $this->Form->control('payment_method');
+                                echo $this->Form->control('ship_method');
+                                echo $this->Form->control('order_id', ['options' => $orders]);
+                                echo $this->Form->control('product_id', ['options' => $products]);
+                                echo $this->Form->control('quantity');
+                                ?>
+                            </fieldset>
+                            <?= $this->Form->button(__('Submit')) ?>
+                            <?= $this->Form->end() ?>
                             <h3>Billing address</h3>
                         </div>
 
@@ -114,7 +137,10 @@ require("../templates/Pages/header.php");
                                                 'style'=>'block'
                                             ]]
 
-                                    );?>
+                                    );
+                                    $this->Html->link(__('Paypal'), ['action' => ''])
+
+                                    ?>
 
 
                                     <!--<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -172,9 +198,7 @@ require("../templates/Pages/header.php");
                                 </div>
                                 <?php
                                 $cart_ttl = 0;
-
                                 $shipping_cost = 0;
-
                                 $grand_ttl = 0;
                                 $cartSession = $this->request->getSession();
                                 if ($cartSession->check('Cart') == false):?>
@@ -246,6 +270,8 @@ require("../templates/Pages/header.php");
                             <div>
                                 <?php
                                 echo $this->Form->button(__('Place Order'), ['type'=>'submit', 'class'=>'ml-auto btn hvr-hover', 'style'=>'font-size: 20px']);?></div>
+                            <div class="col-12 d-flex shopping-box"><div class="ml-auto btn hvr-hover"> <?= $this->Html->link(__('Paypal'), ['action' => 'paypal']) ?> </div>
+                            </div>
 
 
                            <!-- <a href="checkout.html" class="ml-auto btn hvr-hover">Place Order</a> </div>-->

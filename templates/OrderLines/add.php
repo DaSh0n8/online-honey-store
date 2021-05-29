@@ -2,6 +2,8 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\OrderLine $orderLine
+ *  * @var \App\Model\Entity\Product $products
+ *  * @var \App\Model\Entity\Order $orders
  */
 ?>
 <div class="row">

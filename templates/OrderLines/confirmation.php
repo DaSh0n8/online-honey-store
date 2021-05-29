@@ -37,15 +37,66 @@ require("../templates/Pages/header.php");
 <?= $this->fetch('script') ?>
 
 <!-- Start Cart  -->
-<div class="cart-box-main">
-
+<div class="contact-box-main">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                    <h2>THANK YOU FOR YOUR ORDER</h2>
+                    <p>
+                        Your order number is <b> 12345678</b>.<br></br>
+                        We will send you a confirmation email once it has been shipped.<br></br>
+                    Thank you for shopping with Paul's Honey!</p>
 
-
+            </div>
+        </div>
     </div>
-
 </div>
 <!-- End Cart -->
+<!-- Start Footer  -->
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Business Time</h3>
+                        <ul class="list-time">
+                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-top-box">
+                        <h3>Social Media</h3>
+                        <p>Please connect with us through our social media.</p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/PaulsHealthyHoney/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/paulshealthyhoney/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCaio3iruggQWHgHFbU5IkSA" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>St Kilda Esplanade Market <br>P.O.Box 382,<br> Caulfield East, <br> VIC 3145.</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">0412 804 035</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">paulshealthhoney@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
+<!-- End Footer  -->
 <!-- ALL JS FILES -->
 <script src="../../webroot/js/jquery-3.2.1.min.js"></script>
 <script src="../../webroot/js/popper.min.js"></script>

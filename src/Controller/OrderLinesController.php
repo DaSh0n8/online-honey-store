@@ -57,6 +57,7 @@ class OrderLinesController extends AppController
     public function checkout(){
 
 
+
     }
 
     public function paypal(){
@@ -146,7 +147,7 @@ class OrderLinesController extends AppController
          * success=false  取消支付
          */
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl("http://localhost/paypal/payment/exec.php?success=true")
+        $redirectUrls->setReturnUrl("http://localhost/team062-app/order-lines/confirmation")
             ->setCancelUrl("http://localhost/paypal/payment/cancel.php?success=false");
 
 
