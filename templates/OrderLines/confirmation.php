@@ -2,6 +2,8 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\OrderLine[]|\Cake\Collection\CollectionInterface $items
+ * @var \App\Model\Entity\Order $order
+ * @var \App\Model\Entity\Customer $customers
  */
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
@@ -9,6 +11,7 @@ use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
+use Cake\Http\Cookie\Cookie;
 $this->disableAutoLayout();
 
 
@@ -37,14 +40,57 @@ require("../templates/Pages/header.php");
 <?= $this->fetch('script') ?>
 
 <!-- Start Cart  -->
+
+<?php
+$cartSession = $this -> request -> getSession();
+$cart = $cartSession-> read('Cart');
+$customer_id = array_pop($cart);
+$subtotal = 0;
+
+foreach($cart as $item):
+    $subtotal = $subtotal + $item['product_price'];
+endforeach;
+
+$this->Form->create(null, array('url' => array('controller'=>'orders', 'action'=>'ordersadd')))?>
+<fieldset>
+    <?php
+    echo $this->Form->hidden('customer_id', ['value'=>$customer_id]);
+    echo $this->Form->hidden('agent_status', ['value'=>0]);
+    echo $this->Form->hidden('subtotal', ['value'=>$subtotal]);
+    echo $this->Form->hidden('date',['value'=>0]);
+    echo $this->Form->hidden('coupon_applied', ['value'=>0]);
+    ?>
+</fieldset>
+
+<?= $this->Form->end();
+
+$cartSession = $this -> request -> getSession();
+$cart = $cartSession-> read('Cart');
+$orders_id = array_pop($cart);
+
+foreach($cart as $item):
+
+    $this->Form->create(null, array('url' => array('controller'=>'orderlines', 'action'=>'orderlinesadd')))?>
+    <fieldset>
+        <?php
+        echo $this->Form->hidden('order_id', ['value'=>$orders_id]);
+        echo $this->Form->hidden('product_id', ['value'=>$item['product_id']]);
+        echo $this->Form->hidden('quantity', ['value'=>$item['quantity']]);
+        ?>
+    </fieldset>
+    <?= $this->Form->end();
+endforeach;
+
+$cartSession->destroy();
+?>
 <div class="contact-box-main">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-sm-12">
                     <h2>THANK YOU FOR YOUR ORDER</h2>
                     <p>
-                        Your order number is <b> 12345678</b>.<br></br>
-                        We will send you a confirmation email once it has been shipped.<br></br>
+                        Your order number is <b> <?= $orders_id?></b>.<br>
+                        We will send you a confirmation email once it has been shipped.<br>
                     Thank you for shopping with Paul's Honey!</p>
 
             </div>

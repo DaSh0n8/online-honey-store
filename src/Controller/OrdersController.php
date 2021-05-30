@@ -63,6 +63,23 @@ class OrdersController extends AppController
         $this->set(compact('order', 'customers'));
     }
 
+
+    public function ordersadd()
+    {
+        $order = $this->Orders->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $order = $this->Orders->patchEntity($order, $this->request->getData());
+            if ($this->Orders->save($order)) {
+                $order_id = $order->id;
+                $order_array = [$order_id];
+                $cartSession = $this -> request -> getSession();
+                $data= $this->request->getSession()->read('Cart');
+                $cartSession->write('Cart', array_merge($data, $order_array));
+
+            }
+            //$this->Flash->error(__('The order could not be saved. Please, try again.'));
+        }
+    }
     /**
      * Edit method
      *

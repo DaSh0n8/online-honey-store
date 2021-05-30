@@ -4,8 +4,10 @@
  * @var \App\Model\Entity\OrderLine[]|\Cake\Collection\CollectionInterface $items
 *@var \App\Model\Entity\Product $products
  *  * @var \App\Model\Entity\Order $orders
+ * @var \App\Model\Entity\Customer $customer
  */
 use Cake\Cache\Cache;
+use Cake\Http\Cookie\Cookie;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Cake\Datasource\ConnectionManager;
@@ -45,23 +47,18 @@ require("../templates/Pages/header.php");
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                         <div class="title-left">
-                            <?= $this->Form->create(null, array('url' => ['controller'=>'OrderLines','action'=>'add'])) ?>
+                            <?= $this->Form->create(null, array('url' => array('controller'=>'customers', 'action'=>'checkoutadd'))) ?>
                             <fieldset>
-                                <legend><?= __('Add Order Line') ?></legend>
                                 <?php
                                 echo $this->Form->control('first_name');
                                 echo $this->Form->control('last_name');
-                                echo $this->Form->control('email');
-                                echo $this->Form->control('address_line_1');
-                                echo $this->Form->control('address_line_2');
-                                echo $this->Form->control('country');
+                                echo $this->Form->control('phone_number',['type'=>'number','min'=>0]);
+                                echo $this->Form->control('email_address',['type'=>'email']);
+                                echo $this->Form->control('street_address');
+                                echo $this->Form->control('suburb');
+                                echo $this->Form->control('post_code',['type'=>'number']);
                                 echo $this->Form->control('state');
-                                echo $this->Form->control('post_code');
-                                echo $this->Form->control('payment_method');
-                                echo $this->Form->control('ship_method');
-                                echo $this->Form->control('order_id', ['options' => $orders]);
-                                echo $this->Form->control('product_id', ['options' => $products]);
-                                echo $this->Form->control('quantity');
+                                echo $this->Form->control('marketing_emails');
                                 ?>
                             </fieldset>
                             <?= $this->Form->button(__('Submit')) ?>

@@ -205,6 +205,22 @@ class OrderLinesController extends AppController
         $this->set(compact('orderLine', 'orders', 'products'));
     }
 
+    public function orderlinesadd()
+    {
+        $orderLine = $this->OrderLines->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $orderLine = $this->OrderLines->patchEntity($orderLine, $this->request->getData());
+            if ($this->OrderLines->save($orderLine)) {
+                //$this->Flash->success(__('The order line has been saved.'));
+                //return $this->redirect(['action' => 'cart']);
+            }
+            //$this->Flash->error(__('The order line could not be saved. Please, try again.'));
+        }
+        /*$orders = $this->OrderLines->Orders->find('list', ['limit' => 200]);
+        $products = $this->OrderLines->Products->find('list', ['limit' => 200]);
+        $this->set(compact('orderLine', 'orders', 'products'));*/
+    }
+
     /**
      * Edit method
      *

@@ -7,8 +7,12 @@ namespace App\Controller;
  * Customers Controller
  *
  * @property \App\Model\Table\CustomersTable $Customers
+ *
  * @method \App\Model\Entity\Customer[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
+use Cake\Http\Cookie\Cookie;
+use Cake\Http\Cookie\CookieCollection;
+
 class CustomersController extends AppController
 {
     /**
@@ -49,14 +53,37 @@ class CustomersController extends AppController
         $customer = $this->Customers->newEmptyEntity();
         if ($this->request->is('post')) {
             $customer = $this->Customers->patchEntity($customer, $this->request->getData());
+
             if ($this->Customers->save($customer)) {
                 $this->Flash->success(__('The customer has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The customer could not be saved. Please, try again.'));
         }
         $this->set(compact('customer'));
+    }
+
+    public function checkoutadd()
+    {
+        $customer = $this->Customers->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $customer = $this->Customers->patchEntity($customer, $this->request->getData());
+
+            if ($this->Customers->save($customer)) {
+                //$this->Flash->success(__('The customer has been saved.'));
+                $cartSession=$this->request->getSession();
+                $customer_id = $customer->id;
+                $customer_array = array($customer_id);
+                $cartSession=$this->request->getSession();
+                $cartSession->read('Cart.info');
+                $data= $this->request->getSession()->read('Cart');
+                $cartSession->write('Cart', array_merge($data, $customer_array));
+                return $this->redirect(['controller'=>'orderlines', 'action'=>'paypal']);
+
+            }
+            //$this->Flash->error(__('The customer could not be saved. Please, try again.'));
+        }
+        //$this->set(compact('customer'));
     }
 
     /**
