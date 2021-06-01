@@ -9,26 +9,26 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * OrderLines Model
+ * Orderlines Model
  *
  * @property \App\Model\Table\OrdersTable&\Cake\ORM\Association\BelongsTo $Orders
  * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsTo $Products
  *
- * @method \App\Model\Entity\OrderLine newEmptyEntity()
- * @method \App\Model\Entity\OrderLine newEntity(array $data, array $options = [])
- * @method \App\Model\Entity\OrderLine[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\OrderLine get($primaryKey, $options = [])
- * @method \App\Model\Entity\OrderLine findOrCreate($search, ?callable $callback = null, $options = [])
- * @method \App\Model\Entity\OrderLine patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\OrderLine[] patchEntities(iterable $entities, array $data, array $options = [])
- * @method \App\Model\Entity\OrderLine|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\OrderLine saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\OrderLine[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\OrderLine[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
- * @method \App\Model\Entity\OrderLine[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\OrderLine[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Orderline newEmptyEntity()
+ * @method \App\Model\Entity\Orderline newEntity(array $data, array $options = [])
+ * @method \App\Model\Entity\Orderline[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Orderline get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Orderline findOrCreate($search, ?callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Orderline patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Orderline[] patchEntities(iterable $entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Orderline|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Orderline saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Orderline[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Orderline[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Orderline[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Orderline[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
  */
-class OrderLinesTable extends Table
+class OrderlinesTable extends Table
 {
     /**
      * Initialize method
@@ -40,7 +40,7 @@ class OrderLinesTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('order_lines');
+        $this->setTable('orderlines');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
@@ -65,64 +65,6 @@ class OrderLinesTable extends Table
         $validator
             ->integer('id')
             ->allowEmptyString('id', null, 'create');
-
-        $validator
-            ->scalar('first_name')
-            ->maxLength('first_name', 100)
-            ->requirePresence('first_name', 'create')
-            ->notEmptyString('first_name');
-
-        $validator
-            ->scalar('last_name')
-            ->maxLength('last_name', 100)
-            ->requirePresence('last_name', 'create')
-            ->notEmptyString('last_name');
-
-        $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmptyString('email');
-
-        $validator
-            ->scalar('address_line_1')
-            ->maxLength('address_line_1', 100)
-            ->requirePresence('address_line_1', 'create')
-            ->notEmptyString('address_line_1');
-
-        $validator
-            ->scalar('address_line_2')
-            ->maxLength('address_line_2', 100)
-            ->requirePresence('address_line_2', 'create')
-            ->notEmptyString('address_line_2');
-
-        $validator
-            ->scalar('country')
-            ->maxLength('country', 100)
-            ->requirePresence('country', 'create')
-            ->notEmptyString('country');
-
-        $validator
-            ->scalar('state')
-            ->maxLength('state', 10)
-            ->requirePresence('state', 'create')
-            ->notEmptyString('state');
-
-        $validator
-            ->integer('post_code')
-            ->requirePresence('post_code', 'create')
-            ->notEmptyString('post_code');
-
-        $validator
-            ->scalar('payment_method')
-            ->maxLength('payment_method', 20)
-            ->requirePresence('payment_method', 'create')
-            ->notEmptyString('payment_method');
-
-        $validator
-            ->scalar('ship_method')
-            ->maxLength('ship_method', 20)
-            ->requirePresence('ship_method', 'create')
-            ->notEmptyString('ship_method');
 
         $validator
             ->integer('quantity')

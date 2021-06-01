@@ -45,9 +45,7 @@ class ProductsController extends AppController
      */
     public function viewproduct($id = null)
     {
-        $product = $this->Products->get($id, [
-            'contain' => ['OrderLines'],
-        ]);
+        $product = $this->Products->get($id);
 
         $this->set(compact('product'));
     }
@@ -79,9 +77,7 @@ class ProductsController extends AppController
      */
     public function view($id = null)
     {
-        $product = $this->Products->get($id, [
-            'contain' => ['OrderLines'],
-        ]);
+        $product = $this->Products->get($id);
 
         $this->set(compact('product'));
     }

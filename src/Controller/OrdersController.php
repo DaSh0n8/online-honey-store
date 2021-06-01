@@ -5,10 +5,18 @@ namespace App\Controller;
 
 /**
  * Orders Controller
- *
+ * @var \App\Model\Entity\Customer $custom
+ * @property \App\Model\Table\CustomersTable $Customers
  * @property \App\Model\Table\OrdersTable $Orders
  * @method \App\Model\Entity\Order[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ *
  */
+
+use App\Model\Entity\Customer;
+use Cake\Http\Cookie\Cookie;
+use Cake\Http\Cookie\CookieCollection;
+use Cake\ORM\TableRegistry;
+
 class OrdersController extends AppController
 {
     /**
@@ -64,21 +72,28 @@ class OrdersController extends AppController
     }
 
 
+
     public function ordersadd()
     {
         $order = $this->Orders->newEmptyEntity();
         if ($this->request->is('post')) {
-            $order = $this->Orders->patchEntity($order, $this->request->getData());
+            $order = $this->Orders->patchEntity($order, $this->request->getData(),
+                ['associated'=>[
+                    'customer_id',
+                    'Customers.id'
+                ]]);
             if ($this->Orders->save($order)) {
                 $order_id = $order->id;
-                $order_array = [$order_id];
+                $order_array = array($order_id);
                 $cartSession = $this -> request -> getSession();
                 $data= $this->request->getSession()->read('Cart');
                 $cartSession->write('Cart', array_merge($data, $order_array));
 
             }
-            //$this->Flash->error(__('The order could not be saved. Please, try again.'));
+            $this->Flash->error(__('The order could not be saved. Please, try again.'));
         }
+        $customers = $this->Orders->Customers->find('list', ['limit' => 200]);
+        $this->set(compact('order', 'customers'));
     }
     /**
      * Edit method

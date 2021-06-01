@@ -147,8 +147,8 @@ class OrderLinesController extends AppController
          * success=false  取消支付
          */
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl("http://localhost:8080/team062-app/order-lines/confirmation")
-            ->setCancelUrl("http://localhost/paypal/payment/cancel.php?success=false");
+        $redirectUrls->setReturnUrl("https://u21s1062.monash-ie.me/team062-app/order-lines/confirmation")
+            ->setCancelUrl("https://u21s1062.monash-ie.me/team062-app/order-lines/checkout");
 
 
         $payment = new Payment();
@@ -212,13 +212,14 @@ class OrderLinesController extends AppController
             $orderLine = $this->OrderLines->patchEntity($orderLine, $this->request->getData());
             if ($this->OrderLines->save($orderLine)) {
                 //$this->Flash->success(__('The order line has been saved.'));
-                //return $this->redirect(['action' => 'cart']);
+                return $this->redirect(['action' => 'cart']);
             }
             //$this->Flash->error(__('The order line could not be saved. Please, try again.'));
         }
-        /*$orders = $this->OrderLines->Orders->find('list', ['limit' => 200]);
+        return $this->redirect(['action' => 'checkout']);
+        $orders = $this->OrderLines->Orders->find('list', ['limit' => 200]);
         $products = $this->OrderLines->Products->find('list', ['limit' => 200]);
-        $this->set(compact('orderLine', 'orders', 'products'));*/
+        $this->set(compact('orderLine', 'orders', 'products'));
     }
 
     /**

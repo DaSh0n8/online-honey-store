@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\OrderLine[]|\Cake\Collection\CollectionInterface $items
 
  */
+
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
@@ -61,9 +62,12 @@ require("../templates/Pages/header.php");
                         </tr>
                         </thead>
                         <tbody>
-
+                        <?php if($cart==null):?>
+                        <h3>Your cart is currently empty.</h3>
+                        <?php else:?>
                         <?php $cart_ttl=0;?>
                         <?php foreach($cart as $item):?>
+
 
                         <?php
                            /* if($item['product_id'] == ){
@@ -74,6 +78,7 @@ require("../templates/Pages/header.php");
 
                             ?>
                             <tr>
+
                                 <td class="name-pr">
                                     <?= h($item['product_name'])?>
                                 </td>
@@ -87,9 +92,11 @@ require("../templates/Pages/header.php");
                                     $<?= $this->Number->format($total_qty) ?>
                                     <p></p>
                                 </td>
+
                             </tr>
                         <?php endforeach; ?>
 
+                        <?php endif;?>
                         </tbody>
                     </table>
                 </div>
@@ -109,7 +116,10 @@ require("../templates/Pages/header.php");
                 <div class="order-box">
                     <div class="d-flex gr-total">
                         <h5>Grand Total</h5>
+                        <?php if($cart==null):
+                            $cart_ttl=0?>
                         <div class="ml-auto h5">  $ <?= $this->Number->format($cart_ttl) ?> </div>
+                        <?php endif;?>
                     </div>
                     <hr> </div>
             </div>

@@ -3,20 +3,20 @@ declare(strict_types=1);
 
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\OrderLinesTable;
+use App\Model\Table\OrderlinesTable;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\OrderLinesTable Test Case
+ * App\Model\Table\OrderlinesTable Test Case
  */
-class OrderLinesTableTest extends TestCase
+class OrderlinesTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\OrderLinesTable
+     * @var \App\Model\Table\OrderlinesTable
      */
-    protected $OrderLines;
+    protected $Orderlines;
 
     /**
      * Fixtures
@@ -24,7 +24,7 @@ class OrderLinesTableTest extends TestCase
      * @var array
      */
     protected $fixtures = [
-        'app.OrderLines',
+        'app.Orderlines',
         'app.Orders',
         'app.Products',
     ];
@@ -37,8 +37,8 @@ class OrderLinesTableTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $config = $this->getTableLocator()->exists('OrderLines') ? [] : ['className' => OrderLinesTable::class];
-        $this->OrderLines = $this->getTableLocator()->get('OrderLines', $config);
+        $config = $this->getTableLocator()->exists('Orderlines') ? [] : ['className' => OrderlinesTable::class];
+        $this->Orderlines = $this->getTableLocator()->get('Orderlines', $config);
     }
 
     /**
@@ -48,28 +48,8 @@ class OrderLinesTableTest extends TestCase
      */
     public function tearDown(): void
     {
-        unset($this->OrderLines);
+        unset($this->Orderlines);
 
         parent::tearDown();
-    }
-
-    /**
-     * Test validationDefault method
-     *
-     * @return void
-     */
-    public function testValidationDefault(): void
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules(): void
-    {
-        $this->markTestIncomplete('Not implemented yet.');
     }
 }
