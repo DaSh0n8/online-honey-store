@@ -89,7 +89,7 @@ $cartSession->destroy();
             <div class="col-lg-8 col-sm-12">
                     <h2>THANK YOU FOR YOUR ORDER</h2>
                     <p>
-                        Your order number is <b> <?= $orders_id?></b>.<br>
+                        Your order number is <b> 1234</b>.<br>
                         We will send you a confirmation email once it has been shipped.<br>
                     Thank you for shopping with Paul's Honey!</p>
 
